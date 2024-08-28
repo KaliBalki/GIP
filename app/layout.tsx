@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "eField League",
     description:
       "Where every play matters, and every player shines. Welcome to eField.",
-    url: "https://nextjs.org/learn/dashboard-app/adding-metadata",
+    url: "https://e-field-khaki.vercel.app", // This should be your actual base URL
     type: "website",
     images: [
       {
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  metadataBase: new URL("https://e-field-khaki.vercel.app"), // Add this line
 };
 
 export default function RootLayout({
