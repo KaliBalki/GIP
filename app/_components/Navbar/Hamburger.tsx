@@ -91,8 +91,16 @@ const HamburgerMenuCollapse: FC<HamburgerMenuCollapseProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   const inlineStyle = open
-    ? { height: ref.current?.scrollHeight, visibility: "visible", opacity: 1 }
-    : { height: 0, visibility: "hidden", opacity: 0 };
+    ? {
+        height: ref.current?.scrollHeight,
+        visibility: "visible" as "visible",
+        opacity: 1,
+      }
+    : {
+        height: 0,
+        visibility: "hidden" as "hidden",
+        opacity: 0,
+      };
 
   return (
     <div className={style.collapse} style={inlineStyle} ref={ref}>
