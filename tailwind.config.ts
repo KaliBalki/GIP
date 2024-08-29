@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         BgColor: "#101010",
         NavColor: "#161616",
+        TitleColor: "#d9d9d9",
       },
     },
   },

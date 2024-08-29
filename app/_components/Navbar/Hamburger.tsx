@@ -37,7 +37,6 @@ interface HamburgerMenuLinkProps {
   href: string;
 }
 
-// Styles
 const style = {
   nav: `block pl-0 mb-0`,
   navbar: `font-light py-2 px-4`,
@@ -48,7 +47,6 @@ const style = {
   overlay: `fixed inset-0 bg-black transition-opacity duration-700 z-10`,
 };
 
-// Components
 const HamburgerMenu: FC<HamburgerMenuProps> = ({
   children,
   bgColor,
@@ -140,14 +138,12 @@ export const HamburgerMenuPage: FC = () => {
 
   return (
     <>
-      {/* Overlay */}
       <div
         className={`${style.overlay} ${
           open ? "opacity-80 visible" : "opacity-0 invisible"
         }`}
       ></div>
 
-      {/* Hamburger Menu */}
       <HamburgerMenu bgColor="bg-transparent" textColor="text-white">
         <div className="flex justify-between items-center z-30">
           <HamburgerMenuBrand href="#">
