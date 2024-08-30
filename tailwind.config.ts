@@ -18,6 +18,17 @@ const config: Config = {
         NavColor: "#161616",
         TitleColor: "#d9d9d9",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+      animation: {
+        gradient: "gradient 1s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: { "background-position": "200% center" },
+        },
+      },
     },
   },
   plugins: [],

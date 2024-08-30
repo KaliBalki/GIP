@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 ">
+    <div className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 z-50 ">
       {/* Logo Section */}
       <div className="flex-shrink-0 flex items-center">
         <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />

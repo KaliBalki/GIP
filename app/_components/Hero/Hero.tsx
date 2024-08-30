@@ -6,7 +6,7 @@ import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[800px] p-10 bg-transparent">
+    <div className="relative w-full md:h-[800px] h-[700px] p-10 bg-transparent">
       <HeroTitle></HeroTitle>
       <HeroImage></HeroImage>
     </div>

@@ -5,7 +5,7 @@ import Para from "./Texts/Para";
 import Title from "./Texts/Title";
 const HeroTitle = () => {
   return (
-    <div className="relative z-10 w-1/2 flex flex-col justify-center pt-40">
+    <div className="relative z-10 md:w-1/2 flex flex-col justify-center md:pt-40 pt-20">
       <Title></Title>
       <Para></Para>
       <motion.div

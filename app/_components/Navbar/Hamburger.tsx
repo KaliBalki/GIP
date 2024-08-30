@@ -16,7 +16,7 @@ interface HamburgerMenuBrandProps {
 
 interface HamburgerMenuTogglerProps {
   toggle: () => void;
-  isOpen: boolean; // New prop to track if the menu is open
+  isOpen: boolean;
 }
 
 interface HamburgerMenuCollapseProps {
@@ -40,11 +40,11 @@ interface HamburgerMenuLinkProps {
 const style = {
   nav: `block pl-0 mb-0`,
   navbar: `font-light py-2 px-4`,
-  collapse: `transition-all ease duration-700 overflow-hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 z-20`,
-  toggler: `text-3xl focus:outline-none focus:shadow transform transition-transform duration-700 z-30`,
-  link: `block cursor-pointer py-3 px-6 hover:text-gray-400 font-medium text-6xl text-center pb-10`,
+  collapse: `transition-all ease duration-700 overflow-hidden fixed inset-0 transform  w-[100%] max-w-sm z-50 inset-y-1/2 top-[20%]	`,
+  toggler: `text-3xl focus:outline-none focus:shadow transform transition-transform duration-700 z-50`,
+  link: `block cursor-pointer py-3 px-6 hover:text-gray-400 font-medium text-4xl text-center pb-6`,
   brand: `inline-block pt-1.5 pb-1.5 mr-4 cursor-pointer text-2xl font-bold whitespace-nowrap hover:text-gray-400 z-30`,
-  overlay: `fixed inset-0 bg-black transition-opacity duration-700 z-10`,
+  overlay: `fixed inset-0 bg-black transition-opacity duration-700 z-40 backdrop-blur-3xl	`,
 };
 
 const HamburgerMenu: FC<HamburgerMenuProps> = ({
@@ -140,7 +140,7 @@ export const HamburgerMenuPage: FC = () => {
     <>
       <div
         className={`${style.overlay} ${
-          open ? "opacity-80 visible" : "opacity-0 invisible"
+          open ? "opacity-90 visible" : "opacity-0 invisible"
         }`}
       ></div>
 

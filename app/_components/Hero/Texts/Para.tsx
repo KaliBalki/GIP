@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const Para = () => {
   return (
     <motion.p
-      className="text-lg mb-8 text-zinc-400 font-light"
+      className="md:text-lg text-base mb-8 text-zinc-400 font-light md:text-left text-center pt-3"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
+      transition={{ duration: 1, ease: "easeOut", delay: 2.6 }}
     >
       Where every play matters, and every player shines.
       <br />
