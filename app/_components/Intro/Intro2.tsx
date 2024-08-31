@@ -19,7 +19,7 @@ const Intro2 = () => {
       <div className="absolute w-[737px] h-[408px] rounded-3xl overflow-hidden left-[-60vw] lg:left-[-40%] xl:left-[-5%] bg-gradient-to-l from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block">
         <div className="w-full h-full rounded-3xl bg-black">
           <Image
-            src="/path/to/your/image.jpg"
+            src="/HomeBg.png"
             alt="Competitive Experience"
             layout="fill"
             objectFit="cover"

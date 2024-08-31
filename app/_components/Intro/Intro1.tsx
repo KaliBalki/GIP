@@ -15,17 +15,17 @@ const Intro1 = () => {
           real-time feedback tools ensure that every game is a step towards
           mastery.
         </div>
-      </div>
 
-      <div className="absolute bottom-36 w-[737px] h-[408px] rounded-3xl overflow-hidden right-[-60vw] lg:right-[-40%] xl:right-[-5%] bg-gradient-to-r from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block">
-        <div className="w-full h-full rounded-3xl bg-black">
-          <Image
-            src="/path/to/your/image.jpg" // Replace with your image path
-            alt="Competitive Experience"
-            layout="fill" // Ensures the image fills the container
-            objectFit="cover" // Ensures the image covers the area and maintains aspect ratio
-            className="rounded-3xl" // Apply the same border-radius to the image
-          />
+        <div className="absolute top-40 w-[737px] h-[408px] rounded-3xl overflow-hidden right-[-60vw] lg:right-[-40%] xl:right-[-5%] bg-gradient-to-r from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block">
+          <div className="w-full h-full rounded-3xl bg-black">
+            <Image
+              src="/HomeBg.png" // Replace with your image path
+              alt="Competitive Experience"
+              layout="fill" // Ensures the image fills the container
+              objectFit="cover" // Ensures the image covers the area and maintains aspect ratio
+              className="rounded-3xl" // Apply the same border-radius to the image
+            />
+          </div>
         </div>
       </div>
     </div>
