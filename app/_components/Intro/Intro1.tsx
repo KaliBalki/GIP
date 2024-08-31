@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+
 const Intro1 = () => {
+  const textRef = useRef(null);
+  const imageRef = useRef(null);
+
+  const textInView = useInView(textRef, { once: true });
+  const imageInView = useInView(imageRef, { once: true });
+
   return (
-    <div>
-      <div className="md:w-[800px] md:pl-[56px]  flex flex-col space-y-4 px-2">
+    <div className="relative flex flex-col lg:flex-row items-center lg:items-start justify-between">
+      <motion.div
+        ref={textRef}
+        initial={{ opacity: 0, x: -100 }}
+        animate={textInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1.3, ease: "easeOut" }}
+        className="md:w-[800px] md:pl-[56px] flex flex-col space-y-4 px-2"
+      >
         <div className="text-white md:text-5xl text-3xl font-bold md:text-left text-center">
           The Ultimate Competitive Experience
         </div>
@@ -15,19 +29,25 @@ const Intro1 = () => {
           real-time feedback tools ensure that every game is a step towards
           mastery.
         </div>
+      </motion.div>
 
-        <div className="absolute top-40 w-[737px] h-[408px] rounded-3xl overflow-hidden right-[-60vw] lg:right-[-40%] xl:right-[-5%] bg-gradient-to-r from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block">
-          <div className="w-full h-full rounded-3xl bg-black">
-            <Image
-              src="/HomeBg.png" // Replace with your image path
-              alt="Competitive Experience"
-              layout="fill" // Ensures the image fills the container
-              objectFit="cover" // Ensures the image covers the area and maintains aspect ratio
-              className="rounded-3xl" // Apply the same border-radius to the image
-            />
-          </div>
+      <motion.div
+        ref={imageRef}
+        initial={{ opacity: 0, x: 100 }}
+        animate={imageInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1.3, ease: "easeOut" }}
+        className="absolute -top-20 w-[737px] h-[408px] rounded-3xl overflow-hidden right-[-60vw] lg:right-[-40%] xl:right-[-5%] bg-gradient-to-r from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block"
+      >
+        <div className="w-full h-full rounded-3xl bg-black">
+          <Image
+            src="/HomeBg.png"
+            alt="Competitive Experience"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-3xl"
+          />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
