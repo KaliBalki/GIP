@@ -14,12 +14,12 @@ const Navbar: React.FC = () => {
       {/* Navigation Links - Hidden on small screens */}
       <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
         <div className="flex flex-row text-white space-x-20 items-center h-full font-light text-lg">
-          <Link href="/blog/hello-world" className="group relative">
+          <Link href="/" className="group relative">
             <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
               Home
             </span>
           </Link>
-          <Link href="/blog/hello-world" className="group relative">
+          <Link href="/Teams" className="group relative">
             <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
               Teams
             </span>

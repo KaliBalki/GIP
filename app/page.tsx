@@ -8,6 +8,7 @@ import Intro2 from "./_components/Intro/Intro2";
 import Intro1 from "./_components/Intro/Intro1";
 import Faq from "./_components/Faq/Faq";
 import Footer from "./_components/Footer/Footer";
+import React from "react";
 
 export default function Home() {
   const intro1Ref = useRef(null);
