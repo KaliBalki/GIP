@@ -8,7 +8,6 @@ import Intro2 from "./_components/Intro/Intro2";
 import Intro1 from "./_components/Intro/Intro1";
 import Faq from "./_components/Faq/Faq";
 import Footer from "./_components/Footer/Footer";
-import React from "react";
 
 export default function Home() {
   const intro1Ref = useRef(null);
@@ -22,7 +21,6 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <div>
-        <Navbar />
         <Hero />
         <div className="md:pt-80 pt-0 flex flex-col relative">
           <Intro1 />
@@ -39,7 +37,6 @@ export default function Home() {
             <Faq />
           </motion.div>
         </div>
-        <Footer />
       </div>
     </div>
   );

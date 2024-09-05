@@ -1,19 +1,33 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Titles = () => {
+interface TitlesProps {
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
+const Titles: React.FC<TitlesProps> = ({ title, subtitle, description }) => {
   return (
     <div>
-      <div className="flex flex-col justify-center text-center pt-20  space-y-6">
-        <div className="md:text-8xl text-6xl text-TitleColor font-bold">
-          Our League Teams
-        </div>
-        <div className="text-white opacity-65 font-light text-sm px-8">
-          <div>
-            Meet the teams that define the Efield League. From fierce rivalries
-            to unforgettable moments
-          </div>
-          <div>these squads bring the game to life.</div>
-        </div>
+      <div className="flex flex-col justify-center text-center pt-20 space-y-6">
+        <motion.div
+          className="md:text-8xl text-6xl text-TitleColor font-bold"
+          initial={{ opacity: 0, y: 50 }} // Starting position (faded out and down)
+          animate={{ opacity: 1, y: 0 }} // Final position (fully visible and moved up)
+          transition={{ duration: 1 }} // Animation duration (1.2 seconds)
+        >
+          {title}
+        </motion.div>
+        <motion.div
+          className="text-white opacity-65 font-light text-sm px-8"
+          initial={{ opacity: 0, y: 20 }} // Subtle fade-in for subtitle and description
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }} // Delay subtitle and description to appear slightly later
+        >
+          <div>{subtitle}</div>
+          <div>{description}</div>
+        </motion.div>
       </div>
     </div>
   );

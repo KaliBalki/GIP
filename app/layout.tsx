@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Navbar from "./_components/Navbar/Navbar";
+import Footer from "./_components/Footer/Footer";
+import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,7 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-BgColor overflow-x-hidden`}>
+        <Navbar></Navbar>
+        <Loading />
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

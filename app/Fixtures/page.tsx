@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Cards from "../_components/Teams/Cards";
@@ -13,12 +11,10 @@ const Home: React.FC = () => {
     <div className="overflow-x-hidden">
       <div>
         <Titles
-          title="Our League Teams"
-          subtitle="Meet the teams that define the Efield League."
-          description="From fierce rivalries to unforgettable moments, these squads bring the game to life."
+          title="Our League Fixtures"
+          subtitle="Stay ahead of the game with the latest match schedules. "
+          description="Don't miss a moment of the action."
         />
-        <Search />
-        <Cards />
       </div>
     </div>
   );
