@@ -19,24 +19,15 @@ export default function Home() {
   const faqInView = useInView(faqRef, { once: true });
 
   return (
-    <div className="overflow-x-hidden">
-      <div>
-        <Hero />
-        <div className="md:pt-80 pt-0 flex flex-col relative">
-          <Intro1 />
+    <div>
+      <Hero />
+      <div className="md:pt-80 pt-0 flex flex-col relative">
+        <Intro1 />
 
-          <Intro2 />
-        </div>
-        <div className="md:pt-80 pt-0 flex flex-col relative">
-          <motion.div
-            ref={faqRef}
-            initial={{ opacity: 0, y: 50 }}
-            animate={faqInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 2, ease: "easeOut" }}
-          >
-            <Faq />
-          </motion.div>
-        </div>
+        <Intro2 />
+      </div>
+      <div className="md:pt-80 pt-0 flex flex-col relative">
+        <Faq />
       </div>
     </div>
   );
