@@ -10,6 +10,10 @@ export default function Loading() {
   const [loading, setLoading] = React.useState<boolean>(true);
 
   React.useEffect(() => {
+    // Disable scroll on load
+    document.body.style.overflowY = "hidden"; // Disable vertical scroll
+    document.body.style.overflowX = "hidden"; // Ensure horizontal scroll is always disabled
+
     const fakeApiCall = async () => {
       await new Promise((resolve) => setTimeout(resolve, 4000));
     };
@@ -30,10 +34,19 @@ export default function Loading() {
 
       setLoading(false);
 
+      // Re-enable vertical scroll after loading
+      document.body.style.overflowY = "auto";
+
       return () => progressTimers.forEach((timer) => clearTimeout(timer));
     };
 
     loadData();
+
+    // Cleanup to restore overflow settings if the component unmounts
+    return () => {
+      document.body.style.overflowY = "auto"; // Re-enable y-axis scroll
+      document.body.style.overflowX = "hidden"; // Keep x-axis scroll disabled
+    };
   }, []);
 
   return (
