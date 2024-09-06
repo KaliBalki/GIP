@@ -5,7 +5,7 @@ const Card = () => {
   return (
     <div className="flex px-2">
       <div className="max-w-md rounded-3xl p-[5px] bg-gradient-to-b from-[#4a2684] via-[#c261d1] to-[#f6934c]">
-        <div className="rounded-[calc(1.5rem-6px)] p-8 !pr-32 bg-BgColor dark:bg-gray-900">
+        <div className="rounded-[calc(1.5rem-6px)] p-8 !pr-32 bg-BgColor ">
           {/* Team Name and Logo Section */}
           <div className="flex items-center">
             <Image
