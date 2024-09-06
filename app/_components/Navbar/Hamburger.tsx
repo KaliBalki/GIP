@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useRef, useState, useEffect } from "react";
 
 // Type Definitions
 interface HamburgerMenuProps {
@@ -135,6 +135,19 @@ export const HamburgerMenuPage: FC = () => {
   const toggle = () => {
     setOpen((prevState) => !prevState);
   };
+
+  // Disable body scroll when the menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden"; // Disable vertical scrolling
+    } else {
+      document.body.style.overflowY = "auto"; // Re-enable vertical scrolling
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto"; // Cleanup on unmount
+    };
+  }, [open]);
 
   return (
     <>
