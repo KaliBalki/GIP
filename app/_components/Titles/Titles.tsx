@@ -21,9 +21,9 @@ const Titles: React.FC<TitlesProps> = ({ title, subtitle, description }) => {
         </motion.div>
         <motion.div
           className="text-white opacity-65 font-light text-sm px-8"
-          initial={{ opacity: 0, y: 20 }} // Subtle fade-in for subtitle and description
+          initial={{ opacity: 0, y: 50 }} // Subtle fade-in for subtitle and description
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }} // Delay subtitle and description to appear slightly later
+          transition={{ duration: 1, delay: 0.4 }} // Delay subtitle and description to appear slightly later
         >
           <div>{subtitle}</div>
           <div>{description}</div>
