@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface TitlesProps {
   title: string;

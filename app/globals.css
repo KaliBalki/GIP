@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+alifix {
+  position: absolute;
+  left: 37.5%;
+  right: 41.67%;
+  top: 29.17%;
+  bottom: 29.17%;
+
+  background: linear-gradient(180deg, #6c419d 0%, #261737 100%);
+}

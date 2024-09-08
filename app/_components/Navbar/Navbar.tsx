@@ -82,10 +82,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Main Navbar */}
       <nav className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 relative z-[1000]">
         <div className="flex-shrink-0 flex items-center  p-2 z-[1000]">
-          {/* Ensure the logo has its own background and is above the nav */}
           <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />
         </div>
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
@@ -113,8 +111,6 @@ const Navbar = () => {
           </div>
         </div>
         <div className="md:hidden z-[1001]">
-          {" "}
-          {/* Updated z-index */}
           <Hamburger
             color="white"
             rounded
@@ -125,7 +121,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Black Background Overlay */}
       <AnimatePresence>
         {openMobileNav && (
           <motion.div
@@ -138,7 +133,6 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Navigation */}
       <AnimatePresence mode="wait">
         {openMobileNav && (
           <motion.nav

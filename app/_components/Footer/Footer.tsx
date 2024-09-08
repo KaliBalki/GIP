@@ -17,7 +17,7 @@ const Footer = () => {
         >
           Learn more &rarr;
         </Button>
-        {/* Horizontal Line */}
+
         <hr className="w-full border-t-2 border-white mt-12 mb-12" />
         <div className="text-center">
           <Image
