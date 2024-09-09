@@ -1,6 +1,6 @@
 "use client";
 
-import Titles from "../_components/Titles/Titles";
+import Titles from "../_components/Overall/Titles/Titles";
 import Controller from "../_components/Fixtures/Controller";
 import Line from "../_components/Fixtures/Line";
 import FixtureCards from "../_components/Fixtures/FixtureCards";
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           <Line />
         </motion.div>
       </div>
-      <FixtureCards />
+      <FixtureCards duration={0.6} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Titles from "../_components/Titles/Titles";
+import Titles from "../_components/Overall/Titles/Titles";
 import { EmblaOptionsType } from "embla-carousel";
 import "../_components/Players/Carousel/Css/embla.css";
 import EmblaCarousel from "../_components/Players/Carousel/EmblaCarousel";

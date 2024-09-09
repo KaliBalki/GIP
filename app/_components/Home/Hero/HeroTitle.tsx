@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Button from "../Buttons/Buttons";
+import Button from "../../Overall/Buttons/Buttons";
 import Para from "./Texts/Para";
 import Title from "./Texts/Title";
 const HeroTitle = () => {

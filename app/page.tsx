@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Navbar from "./_components/Navbar/Navbar";
-import Hero from "./_components/Hero/Hero";
-import Intro2 from "./_components/Intro/Intro2";
-import Intro1 from "./_components/Intro/Intro1";
-import Faq from "./_components/Faq/Faq";
-import Footer from "./_components/Footer/Footer";
+import Navbar from "./_components/Overall/Navbar/Navbar";
+import Hero from "./_components/Home/Hero/Hero";
+import Intro2 from "./_components/Home/Intro/Intro2";
+import Intro1 from "./_components/Home/Intro/Intro1";
+import Faq from "./_components/Home/Faq/Faq";
+import Footer from "./_components/Overall/Footer/Footer";
 
 export default function Home() {
   const intro1Ref = useRef(null);
