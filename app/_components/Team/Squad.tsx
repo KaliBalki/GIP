@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CardGridPlayer from "./Squad/CardGridPlayer";
+import CardGridPlayer from "../../../components/Cards/Player/Grid/CardGridPlayer";
 
 const Squad = () => {
   return (

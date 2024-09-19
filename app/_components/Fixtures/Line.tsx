@@ -4,7 +4,7 @@ import { motion } from "framer-motion"; // Import framer-motion
 
 const Line = () => {
   return (
-    <div className="w-full h-10 bg-gradient-to-r from-[#6b419e] to-[#fd6208] justify-start items-center gap-2.5 inline-flex mt-10">
+    <div className="w-full md:h-14 h-12 bg-gradient-to-r from-[#6b419e] to-[#fd6208] justify-start items-center gap-2.5 inline-flex mt-10">
       <motion.div
         className="font-bold text-white flex flex-row space-x-4 pl-6"
         initial={{ opacity: 0, x: -10 }}
@@ -13,12 +13,11 @@ const Line = () => {
       >
         <Image
           src="/NoBG_White.png"
-          width={20}
-          height={20}
+          width={30}
+          height={30}
           alt="Picture of the author"
         />
-        {/* Animated Text */}
-        <div>eField - Div 1</div>
+        <div className="md:text-2xl text-lg text-center">eField - Div 1</div>
       </motion.div>
     </div>
   );

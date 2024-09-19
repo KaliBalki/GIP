@@ -11,10 +11,14 @@
 
 @media (max-width: 768px) {
   .embla {
-    --slide-size: 60%;
+    --slide-size: 60% !important;
   }
 }
-
+@media (max-width: 1000px) {
+  .embla {
+    --slide-size: 40%;
+  }
+}
 .embla__viewport {
   overflow: hidden;
   flex-grow: 1;
@@ -31,20 +35,20 @@
   min-width: 0;
   padding-left: var(--slide-spacing);
   margin-left: 5rem;
-  border: 4px solid transparent; /* Set the initial border to transparent */
+  border: 4px solid transparent;
   border-radius: 0.75rem;
-  background-clip: padding-box; /* Ensure the background stays inside the border */
+  background-clip: padding-box;
 }
 
 .embla__slide::before {
   content: "";
   position: absolute;
-  top: -4px; /* Adjust to match the border width */
+  top: -4px;
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border-radius: 0.75rem; /* Match the border-radius of the parent */
-  padding: 2px; /* Adjust padding to control the gradient width */
+  border-radius: 0.75rem;
+  padding: 2px;
   background: linear-gradient(45deg, #7d51ad, #fa610a);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* This ensures the gradient shows only on the border */
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);

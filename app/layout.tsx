@@ -1,45 +1,34 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Overall/Navbar/Navbar";
 import Footer from "./_components/Overall/Footer/Footer";
-import Loading from "./loading";
-const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-grotesk",
+});
+
+export const metadata = {
   title: "eField League",
   description:
     "Where every play matters, and every player shines. Welcome to eField.",
-  openGraph: {
-    title: "eField League",
-    description:
-      "Where every play matters, and every player shines. Welcome to eField.",
-    url: "https://e-field-khaki.vercel.app", // This should be your actual base URL
-    type: "website",
-    images: [
-      {
-        url: "/NoBG_White.png",
-        width: 1200,
-        height: 630,
-        alt: "eField League Open Graph Image",
-      },
-    ],
-  },
-  metadataBase: new URL("https://e-field-khaki.vercel.app"), // Add this line
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-BgColor overflow-x-hidden`}>
-        <Navbar></Navbar>
-        <Loading />
+      <body
+        className={`${inter.className} ${spaceGrotesk.variable} bg-BgColor overflow-x-hidden`}
+      >
+        <Navbar />
         {children}
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );

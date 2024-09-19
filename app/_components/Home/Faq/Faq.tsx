@@ -38,11 +38,11 @@ export default function Faq() {
   return (
     <>
       <div className="flex text-center justify-center md:pt-24 pt-36 md:mb-7">
-        <div className="md:text-7xl !leading-relaxed text-3xl font-bold text-transparent bg-clip-text bg-[linear-gradient(to_right,#f6934c,#c261d1,#4a2684,#f6934c)] bg-[length:200%_auto] hover:animate-gradient">
+        <div className="md:text-7xl !leading-relaxed text-3xl font-bold text-transparent bg-clip-text bg-[linear-gradient(to_right,#f6934c,#c261d1,#4a2684,#f6934c)] bg-[length:200%_auto] hover:animate-gradient Grotesk">
           Frequently Asked Questions
         </div>
       </div>
-      <section className="w-full divide-y divide-[#3b3b3b] rounded-full px-6 md:px-52">
+      <section className="w-full divide-y divide-[#3b3b3b] rounded-full 2xl:px-56 xl:px-44 lg:px-36 md:px-28 px-14">
         {faqData.map((item, index) => (
           <div key={index} className="group p-4 md:py-8 py-6">
             <summary
@@ -59,7 +59,7 @@ export default function Faq() {
               }}
               onTransitionEnd={() => handleTransitionEnd(index)}
               className={`overflow-hidden transition-[max-height] duration-500 ease ${
-                openIndex === index ? "max-h-[1000px] p-4" : "max-h-0 p-0"
+                openIndex === index ? "max-h-[1000px] " : "max-h-0 p-0"
               }`}
               style={{
                 maxHeight:

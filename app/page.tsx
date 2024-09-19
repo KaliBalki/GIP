@@ -21,12 +21,12 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="md:pt-80 pt-0 flex flex-col relative">
+      <div className="lg:pt-80 md:pt-52 pt-48 flex flex-col relative">
         <Intro1 />
 
         <Intro2 />
       </div>
-      <div className="md:pt-80 pt-0 flex flex-col relative">
+      <div className="lg:pt-80 md:pt-52 pt-0 flex flex-col relative">
         <Faq />
       </div>
     </div>

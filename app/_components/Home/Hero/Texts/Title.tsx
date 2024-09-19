@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Title = () => {
   return (
-    <div className="md:text-left text-center">
+    <div className="md:text-left text-center  Grotesk">
       <motion.h1
         className="md:text-8xl text-4xl font-bold text-transparent bg-clip-text bg-[linear-gradient(to_right,#f6934c,#c261d1,#4a2684,#f6934c)] bg-[length:200%_auto] hover:animate-gradient"
         initial={{ opacity: 0, y: 50 }}

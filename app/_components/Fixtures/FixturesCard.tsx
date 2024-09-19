@@ -3,12 +3,8 @@ import Image from "next/image";
 
 const FixturesCard = () => {
   return (
-    <div
-      className="bg-transparent text-white p-1 border-transparent rounded-lg shadow-md w-full max-w-md mx-auto 
-      bg-gradient-to-r from-[#4a2684] via-[#c261d1] to-[#f6934c] 
-      bg-clip-border"
-    >
-      <div className="flex flex-row justify-between items-center bg-BgColor p-5 rounded-lg !py-7 !px-10 space-x-7">
+    <div className=" text-white  rounded-lg shadow-md w-full ">
+      <div className="flex flex-row justify-evenly items-center bg-[#161616] p-3 rounded-lg !py-9 !px-5 space-x-6">
         {/* Team 1 Section */}
         <div className="flex flex-col items-center">
           <Image
@@ -21,7 +17,7 @@ const FixturesCard = () => {
         </div>
 
         {/* Time Section */}
-        <div className="text-center text-lg font-bold">14:30</div>
+        <div className="text-center text-xl font-bold">14:30</div>
 
         {/* Team 2 Section */}
         <div className="flex flex-col items-center">
