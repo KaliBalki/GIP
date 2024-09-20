@@ -122,7 +122,10 @@ const Home: React.FC = () => {
           </div>
 
           {/* Tabs Content stays below */}
-          <div className="mt-8">
+          <div
+            className="mt-8"
+            style={{ minHeight: "470px", paddingBottom: "2rem" }}
+          >
             <div className="flex sm:justify-center justify-center xl:justify-start">
               <AnimatePresence mode="wait">
                 {activeTab === "Players" && (

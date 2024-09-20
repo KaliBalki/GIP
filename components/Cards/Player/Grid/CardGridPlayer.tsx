@@ -1,10 +1,9 @@
 import React from "react";
-import CardPlayer from "../CardPlayer"; // Assuming you have a CardPlayer component
-
+import CardPlayer from "../CardPlayer";
 const CardGridPlayer = () => {
   return (
     <div className="flex justify-center w-full">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-40 gap-y-8  !pt-2 w-full">
+      <div className="grid grid-cols-1 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-8">
         <CardPlayer />
         <CardPlayer />
         <CardPlayer />

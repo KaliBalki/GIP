@@ -3,7 +3,7 @@ import Image from "next/image"; // Import Image for Next.js
 
 const PlayerStats: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center max-w-7xl md:space-x-44">
+    <div className="flex flex-col md:flex-row items-center max-w-7xl md:space-x-24">
       <div className="flex flex-col items-center">
         <Image
           src="/Player.png" // Placeholder for the user-uploaded image
