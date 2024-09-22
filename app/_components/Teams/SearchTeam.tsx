@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Check } from "lucide-react";
 import Image from "next/image";
@@ -25,10 +27,11 @@ const teams = [
 ];
 
 interface SearchProps {
-  setActiveSearch: (search: "team" | "player") => void;
+  setActiveSearch: (search: "team" | "player" | null) => void;
+  activeSearch: "team" | "player" | null;
 }
 
-const Search: React.FC<SearchProps> = ({ setActiveSearch }) => {
+const Search: React.FC<SearchProps> = ({ setActiveSearch, activeSearch }) => {
   const [value, setValue] = useState("");
   const [filteredTeams, setFilteredTeams] = useState(teams);
 
@@ -73,9 +76,9 @@ const Search: React.FC<SearchProps> = ({ setActiveSearch }) => {
       </div>
 
       <AnimatePresence>
-        {value && (
+        {activeSearch === "team" && value && (
           <motion.div
-            className="bg-[#101010] absolute rounded-xl  w-full max-w-lg mt-2 border"
+            className="bg-[#101010] absolute rounded-xl w-full 2xl:max-w-lg xl:max-w-md max-w-sm mt-2 border"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

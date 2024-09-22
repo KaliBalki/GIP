@@ -1,20 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Search from "../_components/Teams/SearchTeam";
 import SearchPlayer from "../_components/Teams/SearchPlayer";
 import TeamCard from "../../components/Cards/Team/TeamSearchCard";
 import PlayerCard from "../../components/Cards/Player/PlayerSearchCard";
-import { EmblaOptionsType } from "embla-carousel";
-import "../_components/Players/Carousel/Css/embla.css";
-import EmblaCarousel from "../_components/Players/Carousel/EmblaCarousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Cards from "../../components/Cards/Team/Grid/TeamSugCards";
 import PlayerCards from "../../components/Cards/Player/Grid/PlayerSugCards";
 
 const Home: React.FC = () => {
-  const [activeSearch, setActiveSearch] = useState<"team" | "player">("team");
+  const [activeSearch, setActiveSearch] = useState<"team" | "player" | null>(
+    null
+  );
   const [activeTab, setActiveTab] = useState<"Teams" | "Players">("Teams");
 
   return (
@@ -27,9 +26,15 @@ const Home: React.FC = () => {
           </h1>
           <div className="mb-4 w-full max-w-[400px] xl:max-w-full">
             {/* Team Search */}
-            <Search setActiveSearch={setActiveSearch} />
+            <Search
+              setActiveSearch={setActiveSearch}
+              activeSearch={activeSearch}
+            />
             {/* Player Search */}
-            <SearchPlayer setActiveSearch={setActiveSearch} />
+            <SearchPlayer
+              setActiveSearch={setActiveSearch}
+              activeSearch={activeSearch}
+            />
           </div>
           <div className="flex flex-row text-[#ffffff62] space-x-6 px-8 text-sm">
             <h1 className="hover:text-white transition-colors duration-500">
