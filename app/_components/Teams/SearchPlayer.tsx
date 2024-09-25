@@ -102,7 +102,10 @@ const SearchPlayer: React.FC<SearchPlayerProps> = ({
                     {filteredPlayers.map((player) => (
                       <CommandItem
                         key={player.value}
-                        onSelect={() => setValue(player.label)}
+                        onSelect={() => {
+                          setValue(player.label);
+                          setActiveSearch(null); // Close the menu after selection
+                        }}
                         className="flex items-center"
                       >
                         <Image
@@ -119,7 +122,6 @@ const SearchPlayer: React.FC<SearchPlayerProps> = ({
                             value === player.label ? "opacity-100" : "opacity-0"
                           )}
                         />
-                        <hr className="h-10"></hr>
                       </CommandItem>
                     ))}
                   </CommandGroup>

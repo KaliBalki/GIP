@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="flex flex-col xl:flex-row py-10 lg:px-40 text-center xl:text-left">
+      <div className="flex flex-col xl:flex-row py-10 lg:px-40 text-center xl:text-left ">
         {/* Left side - Title and Search */}
         <div className="xl:flex-1 w-full flex flex-col items-center xl:items-start justify-center">
           <h1 className="xl:text-[7rem] text-[5.1rem] text-white font-bold mb-4 leading-tight Grotesk">

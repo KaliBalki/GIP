@@ -26,7 +26,7 @@ export default function Home() {
 
         <Intro2 />
       </div>
-      <div className="lg:pt-80 md:pt-52 pt-0 flex flex-col relative">
+      <div className="lg:pt-80 md:pt-52 pt-0 flex flex-col relative mb-44">
         <Faq />
       </div>
     </div>

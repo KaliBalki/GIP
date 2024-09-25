@@ -2,53 +2,58 @@ import React from "react";
 
 const PlayerInfoCard = () => {
   return (
-    <div className="bg-[#161616] !h-max p-10 rounded-2xl space-y-6">
-      <h1 className="Grotesk font-semibold text-4xl text-left">
-        Personal Details
-      </h1>
-      <div className="flex items-center space-x-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          shape-rendering="geometricPrecision"
-          width="36"
-          height="36"
-          text-rendering="geometricPrecision"
-          image-rendering="optimizeQuality"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          viewBox="0 0 512 365.467"
-        >
-          <path
-            fill="#fff"
-            d="M378.186 365.028s-15.794-18.865-28.956-35.099c57.473-16.232 79.41-51.77 79.41-51.77-17.989 11.846-35.099 20.182-50.454 25.885-21.938 9.213-42.997 14.917-63.617 18.866-42.118 7.898-80.726 5.703-113.631-.438-25.008-4.827-46.506-11.407-64.494-18.867-10.091-3.947-21.059-8.774-32.027-14.917-1.316-.877-2.633-1.316-3.948-2.193-.877-.438-1.316-.878-1.755-.878-7.898-4.388-12.285-7.458-12.285-7.458s21.06 34.659 76.779 51.331c-13.163 16.673-29.395 35.977-29.395 35.977C36.854 362.395 0 299.218 0 299.218 0 159.263 63.177 45.633 63.177 45.633 126.354-1.311 186.022.005 186.022.005l4.388 5.264C111.439 27.645 75.461 62.305 75.461 62.305s9.653-5.265 25.886-12.285c46.945-20.621 84.236-25.885 99.592-27.64 2.633-.439 4.827-.878 7.458-.878 26.763-3.51 57.036-4.387 88.624-.878 41.68 4.826 86.43 17.111 132.058 41.68 0 0-34.66-32.906-109.244-55.281l6.143-7.019s60.105-1.317 122.844 45.628c0 0 63.178 113.631 63.178 253.585 0-.438-36.854 62.739-133.813 65.81l-.001.001zm-43.874-203.133c-25.006 0-44.75 21.498-44.75 48.262 0 26.763 20.182 48.26 44.75 48.26 25.008 0 44.752-21.497 44.752-48.26 0-26.764-20.182-48.262-44.752-48.262zm-160.135 0c-25.008 0-44.751 21.498-44.751 48.262 0 26.763 20.182 48.26 44.751 48.26 25.007 0 44.75-21.497 44.75-48.26.439-26.763-19.742-48.262-44.75-48.262z"
-          />
-        </svg>
-        <div className="flex flex-col">
-          <h1 className="font-light text-base text-left">Discord Name</h1>
-          <h1 className="font-light text-sm text-left">
-            <span className="font-semibold">Not Sure</span> -{" "}
-            <span className="opacity-40 font-extralight">Discord Link</span>
-          </h1>
+    <div className="flex flex-col w-full  bg-[#121212] p-5 rounded-2xl border-white border border-opacity-5 ">
+      <div className="flex justify-between">
+        <div className="text-base font-extralight">Club</div>
+        <div className="font-medium">Manchester City</div>
+      </div>
+      <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
+      <div className="flex justify-between">
+        <div className="text-base font-extralight">Position</div>
+        <div className="font-medium">Attacker</div>
+      </div>
+      <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
+
+      <div className="flex flex-col">
+        <div className="text-base font-extralight">Social Links</div>
+        <div className="flex space-x-5">
+          <div className="font-normal">Steam</div>
+          <div className="font-normal">Discord</div>
         </div>
       </div>
-      <div className="flex items-center space-x-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="36"
-          height="36"
-          viewBox="0 0 50 50"
-          className="fill-white"
-        >
-          <path d="M 25 3 C 13.59 3 4.209375 11.680781 3.109375 22.800781 L 14.300781 28.529297 C 15.430781 27.579297 16.9 27 18.5 27 L 18.550781 27 C 18.940781 26.4 19.389375 25.649141 19.859375 24.869141 C 20.839375 23.259141 21.939531 21.439062 23.019531 20.039062 C 23.259531 15.569063 26.97 12 31.5 12 C 36.19 12 40 15.81 40 20.5 C 40 25.03 36.430937 28.740469 31.960938 28.980469 C 30.560938 30.060469 28.750859 31.160859 27.130859 32.130859 C 26.350859 32.610859 25.6 33.059219 25 33.449219 L 25 33.5 C 25 37.09 22.09 40 18.5 40 C 14.91 40 12 37.09 12 33.5 C 12 33.33 12.009531 33.17 12.019531 33 L 3.2792969 28.519531 C 4.9692969 38.999531 14.05 47 25 47 C 37.15 47 47 37.15 47 25 C 47 12.85 37.15 3 25 3 z M 31.5 14 C 27.92 14 25 16.92 25 20.5 C 25 24.08 27.92 27 31.5 27 C 35.08 27 38 24.08 38 20.5 C 38 16.92 35.08 14 31.5 14 z M 31.5 16 C 33.99 16 36 18.01 36 20.5 C 36 22.99 33.99 25 31.5 25 C 29.01 25 27 22.99 27 20.5 C 27 18.01 29.01 16 31.5 16 z M 18.5 29 C 17.71 29 16.960313 29.200312 16.320312 29.570312 L 19.640625 31.269531 C 20.870625 31.899531 21.350469 33.410625 20.730469 34.640625 C 20.280469 35.500625 19.41 36 18.5 36 C 18.11 36 17.729375 35.910469 17.359375 35.730469 L 14.029297 34.019531 C 14.289297 36.259531 16.19 38 18.5 38 C 20.99 38 23 35.99 23 33.5 C 23 31.01 20.99 29 18.5 29 z"></path>
-        </svg>
-        <div className="flex flex-col">
-          <h1 className="font-light text-base text-left">Steam Name</h1>
-          <h1 className="font-light text-sm text-left">
-            <span className="font-semibold">Not Sure</span> -{" "}
-            <span className="opacity-40 font-extralight">Steam Link</span>
-          </h1>
+      <div className="mt-9 flex flex-col">
+        <h1 className="text-xl font-bold bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
+          Honours & Awards
+        </h1>
+        <div className="flex justify-between flex-col">
+          <div className="flex justify-between">
+            <h1
+              className="text-base
+         font-extralight bg-gradient-to-r"
+            >
+              Premier League Champion
+            </h1>
+            <h1
+              className="text-lg
+         font-medium bg-gradient-to-r"
+            >
+              2
+            </h1>
+          </div>
+          <div className="flex justify-between">
+            <h1
+              className="text-base
+         font-extralight bg-gradient-to-r"
+            >
+              Premier League Champion
+            </h1>
+            <h1
+              className="text-lg
+         font-medium bg-gradient-to-r"
+            >
+              2
+            </h1>
+          </div>
         </div>
       </div>
     </div>
