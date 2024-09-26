@@ -1,6 +1,6 @@
 "use client";
 import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 import {
   Card,
   CardContent,
@@ -15,7 +15,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-export const description = "A multiple bar chart";
+export const description = "A radar chart with multiple data";
 const chartData = [
   { month: "Goals", desktop: 186, mobile: 80 },
   { month: "Shots", desktop: 305, mobile: 200 },
@@ -34,7 +34,8 @@ const chartConfig = {
     color: "#f69053",
   },
 } satisfies ChartConfig;
-export function PlayerChart() {
+
+export function PlayerChartR() {
   return (
     <Card className="bg-[#0a0a0a44] mt-4">
       <CardHeader className="items-center pb-4 text-center">
@@ -44,27 +45,28 @@ export function PlayerChart() {
         </CardTitle>
         <CardDescription>21 June 2024</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className=" max-h-[350px]">
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
+      <CardContent className="pb-2">
+        <ChartContainer
+          config={chartConfig}
+          className="mx-auto aspect-square max-h-[350px]"
+        >
+          <RadarChart data={chartData}>
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="dashed" />}
+              content={<ChartTooltipContent indicator="line" />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-          </BarChart>
+            <PolarAngleAxis dataKey="month" />
+            <PolarGrid />
+            <Radar
+              dataKey="desktop"
+              fill="var(--color-desktop)"
+              fillOpacity={0.6}
+            />
+            <Radar dataKey="mobile" fill="var(--color-mobile)" />
+          </RadarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col gap-2 text-sm">
         <div className="leading-none text-muted-foreground text-center">
           If you recognize any issue, Contact us!
         </div>

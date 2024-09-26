@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MyChart } from "./PlayerChart";
+import { PlayerChart } from "./PlayerChart";
 import PlayerTransferTable from "./PlayerTransferTable";
+import { PlayerChartR } from "./PlayerChartR";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const TabsSection: React.FC = () => {
+  // State to track the selected chart type
+  const [selectedChart, setSelectedChart] = useState("bar");
+
   return (
     <Tabs defaultValue="Players">
       <div className="flex items-center justify-center sm:justify-center xl:justify-start w-full text-center sm:text-left">
@@ -28,11 +40,26 @@ const TabsSection: React.FC = () => {
         </TabsContent>
 
         <TabsContent value="Stats" className="w-full">
-          <h1 className="text-2xl font-bold mb-4 text-center md:text-left bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
-            Stats Breakdown
-          </h1>
-          <div className=" p-4 rounded-xl">
-            <MyChart />
+          <div className="flex flex-row items-center">
+            <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
+              Stats Breakdown{" "}
+            </h1>
+            <hr className="w-10 border-t-4 border  mx-4 rounded-3xl" />
+            <Select
+              onValueChange={(value) => setSelectedChart(value)} // Update state based on selection
+              defaultValue="bar"
+            >
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select Chart" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="radar">Radar Chart</SelectItem>
+                <SelectItem value="bar">Bar Chart</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="p-2 rounded-xl">
+            {selectedChart === "bar" ? <PlayerChart /> : <PlayerChartR />}
           </div>
         </TabsContent>
       </div>
