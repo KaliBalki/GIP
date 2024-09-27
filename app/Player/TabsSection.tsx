@@ -40,11 +40,11 @@ const TabsSection: React.FC = () => {
         </TabsContent>
 
         <TabsContent value="Stats" className="w-full">
-          <div className="flex flex-row items-center">
+          <div className="flex md:flex-row flex-col md:space-y-0 space-y-3 items-center">
             <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
               Stats Breakdown{" "}
             </h1>
-            <hr className="w-10 border-t-4 border  mx-4 rounded-3xl" />
+            <hr className="w-10 border-t-4 border mx-4 rounded-3xl" />
             <Select
               onValueChange={(value) => setSelectedChart(value)} // Update state based on selection
               defaultValue="bar"
@@ -58,8 +58,11 @@ const TabsSection: React.FC = () => {
               </SelectContent>
             </Select>
           </div>
-          <div className="p-2 rounded-xl">
-            {selectedChart === "bar" ? <PlayerChart /> : <PlayerChartR />}
+          <div className="p-2 mt-4 mb-8 sm:mb-0 rounded-xl">
+            {/* Ensure the chart container is responsive and doesn't overflow */}
+            <div className="w-full max-w-[600px] mx-auto">
+              {selectedChart === "bar" ? <PlayerChart /> : <PlayerChartR />}
+            </div>
           </div>
         </TabsContent>
       </div>

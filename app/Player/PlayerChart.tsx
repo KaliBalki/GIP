@@ -38,7 +38,6 @@ export function PlayerChart() {
   return (
     <Card className="bg-[#0a0a0a44] mt-4">
       <CardHeader className="items-center pb-4 text-center">
-        {/* Using responsive text size for iPhone (small devices) */}
         <CardTitle className="text-lg sm:text-xl">
           Fade vs FC Barcelona
         </CardTitle>
