@@ -29,9 +29,14 @@ const teams = [
 interface SearchProps {
   setActiveSearch: (search: "team" | "player" | null) => void;
   activeSearch: "team" | "player" | null;
+  setSelectedTeam: (team: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ setActiveSearch, activeSearch }) => {
+const Search: React.FC<SearchProps> = ({
+  setActiveSearch,
+  activeSearch,
+  setSelectedTeam,
+}) => {
   const [value, setValue] = useState("");
   const [filteredTeams, setFilteredTeams] = useState(teams);
 
@@ -91,7 +96,11 @@ const Search: React.FC<SearchProps> = ({ setActiveSearch, activeSearch }) => {
                     {filteredTeams.map((team) => (
                       <CommandItem
                         key={team.value}
-                        onSelect={() => setValue(team.label)}
+                        onSelect={() => {
+                          setValue(team.label);
+                          setSelectedTeam(team.label); // Set selected team
+                          setActiveSearch("team"); // Keep search field active
+                        }}
                         className="flex items-center"
                       >
                         <Image

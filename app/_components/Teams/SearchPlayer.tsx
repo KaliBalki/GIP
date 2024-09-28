@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Command,
-  CommandInput,
   CommandList,
   CommandEmpty,
   CommandGroup,
@@ -38,11 +37,13 @@ const players = [
 interface SearchPlayerProps {
   setActiveSearch: (search: "team" | "player" | null) => void;
   activeSearch: "team" | "player" | null;
+  setSelectedPlayer: (player: string) => void;
 }
 
 const SearchPlayer: React.FC<SearchPlayerProps> = ({
   setActiveSearch,
   activeSearch,
+  setSelectedPlayer,
 }) => {
   const [value, setValue] = useState("");
   const [filteredPlayers, setFilteredPlayers] = useState(players);
@@ -104,7 +105,8 @@ const SearchPlayer: React.FC<SearchPlayerProps> = ({
                         key={player.value}
                         onSelect={() => {
                           setValue(player.label);
-                          setActiveSearch(null); // Close the menu after selection
+                          setSelectedPlayer(player.label); // Set selected player
+                          setActiveSearch("player"); // Keep search field active
                         }}
                         className="flex items-center"
                       >

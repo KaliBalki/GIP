@@ -15,6 +15,18 @@ const Home: React.FC = () => {
     null
   );
   const [activeTab, setActiveTab] = useState<"Teams" | "Players">("Teams");
+  const [selectedPlayer, setSelectedPlayer] = useState<string | null>(null);
+  const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
+
+  const handleSelectPlayer = (player: string) => {
+    setSelectedPlayer(player);
+    setActiveSearch(null); // This line will now only close the search field
+  };
+
+  const handleSelectTeam = (team: string) => {
+    setSelectedTeam(team);
+    setActiveSearch(null); // This line will now only close the search field
+  };
 
   return (
     <div className="overflow-x-hidden">
@@ -29,11 +41,13 @@ const Home: React.FC = () => {
             <Search
               setActiveSearch={setActiveSearch}
               activeSearch={activeSearch}
+              setSelectedTeam={handleSelectTeam}
             />
             {/* Player Search */}
             <SearchPlayer
               setActiveSearch={setActiveSearch}
               activeSearch={activeSearch}
+              setSelectedPlayer={handleSelectPlayer}
             />
           </div>
           <div className="flex flex-row text-[#ffffff62] space-x-6 px-8 text-sm">
@@ -65,7 +79,7 @@ const Home: React.FC = () => {
           style={{ height: "auto", minHeight: "500px" }}
         >
           <AnimatePresence mode="wait">
-            {activeSearch === "team" && (
+            {activeSearch === "team" && selectedTeam && (
               <motion.div
                 key="teamCard"
                 initial={{ opacity: 0, x: -20 }}
@@ -75,7 +89,7 @@ const Home: React.FC = () => {
                 className="absolute"
               >
                 <TeamCard
-                  teamName="Athletic Club"
+                  teamName={selectedTeam}
                   foundationYear="1898"
                   captain="John Doe"
                   titles="5x Champions"
@@ -85,7 +99,7 @@ const Home: React.FC = () => {
           </AnimatePresence>
 
           <AnimatePresence mode="wait">
-            {activeSearch === "player" && (
+            {activeSearch === "player" && selectedPlayer && (
               <motion.div
                 key="playerCard"
                 initial={{ opacity: 0, x: 20 }}
@@ -95,7 +109,7 @@ const Home: React.FC = () => {
                 className="absolute"
               >
                 <PlayerCard
-                  playerName="Lionel Messi"
+                  playerName={selectedPlayer}
                   position="Forward"
                   rating={5}
                   imageUrl="/NoBG_White.png"
