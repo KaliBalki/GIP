@@ -3,8 +3,8 @@ import Image from "next/image";
 import TeamTabs from "./TeamTabs"; // Import the new TeamTabs component
 
 interface TeamProps {
-  onTabChange: (tab: "squad" | "fixtures") => void;
-  activeTab: string; // Add activeTab as a prop to highlight the current tab
+  onTabChange: (tab: "squad" | "fixtures" | "stats") => void; // Add "stats" as a valid option
+  activeTab: string; // No change needed here
 }
 
 const Team: React.FC<TeamProps> = ({ onTabChange, activeTab }) => {
@@ -22,7 +22,6 @@ const Team: React.FC<TeamProps> = ({ onTabChange, activeTab }) => {
           <div className="md:text-8xl text-4xl font-bold">TeamName</div>
           <hr className="md:border-2 md:my-4 border my-2 border-white w-full" />
 
-        
           <TeamTabs activeTab={activeTab} onTabChange={onTabChange} />
         </div>
       </div>
