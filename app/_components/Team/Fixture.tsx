@@ -15,7 +15,7 @@ const Fixtures = () => {
         <Controller />
       </div>
       <div className="pt-10 2xl:px-[10rem] xl:px-[8rem] lg:px-[3rem] md:px-[5rem] sm:px-[4rem] px-[2rem] md:justify-start">
-        <FixtureCards duration={0.1} />
+        <FixtureCards />
       </div>
     </motion.div>
   );

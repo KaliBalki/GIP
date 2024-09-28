@@ -1,4 +1,3 @@
-"use client";
 import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import {
@@ -15,7 +14,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+
 export const description = "A multiple bar chart";
+
 const chartData = [
   { month: "Goals", desktop: 186, mobile: 80 },
   { month: "Shots", desktop: 305, mobile: 200 },
@@ -25,27 +26,30 @@ const chartData = [
   { month: "Saves", desktop: 214, mobile: 140 },
   { month: "Catches", desktop: 214, mobile: 140 },
 ];
+
 const chartConfig = {
   desktop: {
-    label: "Player",
+    label: "Barcelona",
     color: "#7145ad",
   },
   mobile: {
-    label: "Team",
+    label: "Real Madrid",
     color: "#f69053",
   },
 } satisfies ChartConfig;
-export function PlayerChart() {
+
+export function TeamChart() {
   return (
-    <Card className="bg-[#0a0a0a44] mt-4">
+    <Card className="bg-[#0a0a0a44]">
       <CardHeader className="items-center pb-10 text-center">
         <CardTitle className="text-lg sm:text-xl">
-          Fade vs FC Barcelona
+          Barcelona vs Real Madrid
         </CardTitle>
         <CardDescription>21 June 2024</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className=" max-h-[360px]">
+      {/* Set explicit height to avoid collapse and center content */}
+      <CardContent className="flex justify-center items-center max-h-[400px]  ">
+        <ChartContainer config={chartConfig} className="max-h-[360px] w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
@@ -64,7 +68,7 @@ export function PlayerChart() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-center gap-2 text-sm">
         <div className="leading-none text-muted-foreground text-center">
           If you recognize any issue, Contact us!
         </div>

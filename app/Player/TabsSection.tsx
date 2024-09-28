@@ -12,14 +12,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import PlayerController from "../_components/Fixtures/PlayerController";
+
 const TabsSection: React.FC = () => {
-  // State to track the selected chart type
   const [selectedChart, setSelectedChart] = useState("bar");
 
   return (
     <Tabs defaultValue="Players">
       <div className="flex items-center justify-center sm:justify-center xl:justify-start w-full text-center sm:text-left">
-        {/* Heading and Line */}
         <div className="flex items-center md:flex-row flex-col space-y-4">
           <h1 className="Grotesk text-white text-6xl font-semibold">Faded</h1>
           <hr className="2xl:w-96 lg:w-72 md:w-24 w-16 border-t-4 border-dotted border-[#262626] mx-4 rounded-3xl" />
@@ -57,6 +57,9 @@ const TabsSection: React.FC = () => {
                 <SelectItem value="bar">Bar Chart</SelectItem>
               </SelectContent>
             </Select>
+
+            <hr className="w-10 border-t-4 border mx-4 rounded-3xl" />
+            <PlayerController />
           </div>
           <div className="p-2 mt-4 mb-8 sm:mb-0 rounded-xl">
             {/* Ensure the chart container is responsive and doesn't overflow */}

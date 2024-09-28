@@ -15,7 +15,7 @@ const Footer = () => {
           variant="learnMore"
           onClick={() => alert("ali homo")}
         >
-          Learn more &rarr;
+          Launch App &rarr;
         </Button>
 
         <hr className="w-full border-t-2 border-white mt-12 mb-12" />

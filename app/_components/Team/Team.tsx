@@ -22,7 +22,7 @@ const Team: React.FC<TeamProps> = ({ onTabChange, activeTab }) => {
           <div className="md:text-8xl text-4xl font-bold">TeamName</div>
           <hr className="md:border-2 md:my-4 border my-2 border-white w-full" />
 
-          {/* Render the TeamTabs component */}
+        
           <TeamTabs activeTab={activeTab} onTabChange={onTabChange} />
         </div>
       </div>

@@ -21,7 +21,8 @@ const chartData = [
   { month: "Shots", desktop: 305, mobile: 200 },
   { month: "Passing", desktop: 237, mobile: 120 },
   { month: "Tackles", desktop: 73, mobile: 190 },
-  { month: "Saves", desktop: 209, mobile: 130 },
+  { month: "Interceptions", desktop: 209, mobile: 130 },
+  { month: "Saves", desktop: 214, mobile: 140 },
   { month: "Catches", desktop: 214, mobile: 140 },
 ];
 const chartConfig = {

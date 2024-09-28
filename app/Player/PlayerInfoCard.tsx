@@ -13,6 +13,11 @@ const PlayerInfoCard = () => {
         <div className="font-medium">Attacker</div>
       </div>
       <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
+      <div className="flex justify-between">
+        <div className="text-base font-extralight">Nationality</div>
+        <div className="font-medium">Iraq</div>
+      </div>
+      <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
 
       <div className="flex flex-col">
         <div className="text-base font-extralight">Social Links</div>
