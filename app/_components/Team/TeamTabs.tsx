@@ -12,7 +12,7 @@ const TeamTabs: React.FC<TeamTabsProps> = ({ activeTab, onTabChange }) => {
       <div
         className={`absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-lg transition-all duration-500 ${
           activeTab === "squad"
-            ? "-left-[19px]"
+            ? "!-left-[19px]"
             : activeTab === "fixtures"
             ? "left-[87px]"
             : "left-[187px]"
