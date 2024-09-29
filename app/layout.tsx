@@ -15,6 +15,7 @@ export const metadata = {
   title: "eField League",
   description:
     "Where every play matters, and every player shines. Welcome to eField.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -24,6 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={`${inter.className} ${spaceGrotesk.variable} bg-BgColor overflow-x-hidden`}
       >
