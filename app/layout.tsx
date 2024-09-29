@@ -16,6 +16,15 @@ export const metadata = {
   description:
     "Where every play matters, and every player shines. Welcome to eField.",
   manifest: "/manifest.json",
+  themeColor: "#000000",
+  icons: {
+    icon: "/icons/icon-192x192.png",
+    apple: "/icons/icon-192x192.png",
+  },
+  viewport:
+    "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+  appleMobileWebAppCapable: "yes",
+  appleMobileWebAppStatusBarStyle: "black-translucent",
 };
 
 export default function RootLayout({
@@ -25,9 +34,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body
         className={`${inter.className} ${spaceGrotesk.variable} bg-BgColor overflow-x-hidden`}
       >
