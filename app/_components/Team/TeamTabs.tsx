@@ -22,7 +22,7 @@ const TeamTabs: React.FC<TeamTabsProps> = ({ activeTab, onTabChange }) => {
       {/* Squad Button */}
       <button
         className={`focus:outline-none relative z-10  ${
-          activeTab === "squad" ? "text-white" : "text-gray-400"
+          activeTab === "squad" ? "text-white" : "opacity-45"
         }`}
         onClick={() => onTabChange("squad")}
       >
@@ -32,7 +32,7 @@ const TeamTabs: React.FC<TeamTabsProps> = ({ activeTab, onTabChange }) => {
       {/* Fixtures Button */}
       <button
         className={`focus:outline-none relative z-10 mx-10 ${
-          activeTab === "fixtures" ? "text-white" : "text-gray-400"
+          activeTab === "fixtures" ? "text-white" : "opacity-45"
         }`}
         onClick={() => onTabChange("fixtures")}
       >
@@ -42,7 +42,7 @@ const TeamTabs: React.FC<TeamTabsProps> = ({ activeTab, onTabChange }) => {
       {/* Stats Button */}
       <button
         className={`focus:outline-none relative z-10 ${
-          activeTab === "stats" ? "text-white" : "text-gray-400"
+          activeTab === "stats" ? "text-white" : "opacity-45"
         }`}
         onClick={() => onTabChange("stats")}
       >

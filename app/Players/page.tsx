@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Titles from "../_components/Overall/Titles/Titles";
 import { EmblaOptionsType } from "embla-carousel";
 import "../_components/Players/Carousel/Css/embla.css";
 import EmblaCarousel from "../_components/Players/Carousel/EmblaCarousel";
 import { motion } from "framer-motion"; // Import from framer-motion
-import SearchPla from "../_components/Players/SearchPla";
+import SearchPlayers from "../_components/Players/SearchPlayers";
 
 const OPTIONS: EmblaOptionsType = {
   loop: true,
@@ -24,12 +24,14 @@ const containerVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      delay: custom, // Custom delay for each section
+      delay: custom,
     },
   }),
 };
 
 const Page: React.FC = () => {
+  const [selectedPlayer, setSelectedPlayer] = useState<string | null>(null); // State to track selected player
+
   return (
     <>
       <Titles
@@ -37,13 +39,20 @@ const Page: React.FC = () => {
         subtitle="Meet the Players that define the Efield League."
         description="From fierce rivalries to unforgettable moments, these people bring the game to life."
       />
-      <SearchPla />
-
-      <div>
-        {/* Goalkeeper Section */}
+      <motion.div
+        className="flex justify-center md:mt-4 mt-5 mb-10"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.9 }}
+      >
+        <div className="flex justify-center md:mt-4 mt-5 mb-10">
+          <SearchPlayers setSelectedPlayer={setSelectedPlayer} />
+        </div>
+      </motion.div>
+      <div className="mb-32">
         <motion.div
           className="pt-10 space-y-6 md:px-20 px-8"
-          custom={1.7} // Delay for the first section
+          custom={1.7}
           initial="hidden"
           animate="visible"
           variants={containerVariants}

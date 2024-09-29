@@ -1,10 +1,10 @@
 import React from "react";
-import TeamController from "../Fixtures/TeamController";
+import TeamController from "../../Fixtures/TeamController";
 import { TeamChart } from "./TeamChart";
 
 const Stats = () => {
   return (
-    <div className="w-full">
+    <div className="w-full mb-32">
       {/* First container: Section Stats and Overall Stats */}
       <div className="flex justify-center mt-10 w-full">
         <div className="flex md:flex-row flex-col justify-between max-w-5xl ">
@@ -74,7 +74,6 @@ const Stats = () => {
         </div>
       </div>
 
-      {/* Second container: TeamController and TeamChart */}
       <div className="flex flex-col items-center mt-10 w-full">
         <div className="max-w-4xl w-full p-4">
           <TeamController />

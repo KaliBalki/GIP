@@ -14,18 +14,18 @@ const Titles: React.FC<TitlesProps> = ({ title, subtitle, description }) => {
     <div>
       <div className="flex flex-col justify-center text-center pt-20 space-y-6">
         <motion.div
-          className="md:text-8xl text-6xl text-TitleColor font-bold"
-          initial={{ opacity: 0, y: 50 }} // Starting position (faded out and down)
-          animate={{ opacity: 1, y: 0 }} // Final position (fully visible and moved up)
-          transition={{ duration: 1 }} // Animation duration (1.2 seconds)
+          className="md:text-8xl text-6xl text-TitleColor font-black Grotesk"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           {title}
         </motion.div>
         <motion.div
           className="text-white opacity-65 font-light text-sm px-8"
-          initial={{ opacity: 0, y: 50 }} // Subtle fade-in for subtitle and description
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }} // Delay subtitle and description to appear slightly later
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div>{subtitle}</div>
           <div>{description}</div>

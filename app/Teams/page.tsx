@@ -33,10 +33,20 @@ const Home: React.FC = () => {
       <div className="flex flex-col xl:flex-row py-10 lg:px-40 text-center xl:text-left ">
         {/* Left side - Title and Search */}
         <div className="xl:flex-1 w-full flex flex-col items-center xl:items-start justify-center">
-          <h1 className="xl:text-[7rem] text-[5.1rem] text-white font-bold mb-4 leading-tight Grotesk">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="xl:text-[7rem] text-[5.1rem] text-white font-bold mb-4 leading-tight Grotesk"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             Our League <br /> Teams
-          </h1>
-          <div className="mb-4 w-full max-w-[400px] xl:max-w-full">
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-4 w-full max-w-[400px] xl:max-w-full"
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             {/* Team Search */}
             <Search
               setActiveSearch={setActiveSearch}
@@ -49,28 +59,7 @@ const Home: React.FC = () => {
               activeSearch={activeSearch}
               setSelectedPlayer={handleSelectPlayer}
             />
-          </div>
-          <div className="flex flex-row text-[#ffffff62] space-x-6 px-8 text-sm">
-            <h1 className="hover:text-white transition-colors duration-500">
-              All Players
-            </h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff62"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-            <h1 className="hover:text-white transition-colors duration-500">
-              All Teams
-            </h1>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right side - TeamCard or PlayerCard with Animation */}
@@ -120,8 +109,12 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Suggestions + Tabs */}
-      <div className="lg:px-40 pt-52">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="lg:px-40 pt-52"
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 1.3 }}
+      >
         <Tabs
           defaultValue="Teams"
           onValueChange={(value) => setActiveTab(value as "Teams" | "Players")}
@@ -143,7 +136,7 @@ const Home: React.FC = () => {
           {/* Tabs Content stays below */}
           <div
             className="mt-8"
-            style={{ minHeight: "470px", paddingBottom: "2rem" }}
+            style={{ minHeight: "470px", marginBottom: "2rem" }}
           >
             <div className="flex sm:justify-center justify-center xl:justify-start">
               <AnimatePresence mode="wait">
@@ -180,7 +173,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </Tabs>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const HeroTitle = () => {
           Join us!
         </Button>
         <Button variant="learnMore" onClick={() => alert("ali homo")}>
-          Learn more &rarr;
+          Download App &rarr;
         </Button>
       </motion.div>
     </div>

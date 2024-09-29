@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CardGridPlayer from "../../../components/Cards/Player/Grid/CardGridPlayer";
+import CardGridPlayer from "../../../../components/Cards/Player/Grid/CardGridPlayer";
 
 const Squad = () => {
   return (
@@ -22,7 +22,7 @@ const Squad = () => {
         <p className="text-white text-xl font-semibold mb-3">MIDDLEFIELDER</p>
         <CardGridPlayer />
       </div>
-      <div className="flex flex-col md:justify-center px-4 pt-10 w-full md:!px-40">
+      <div className="flex flex-col md:justify-center px-4 pt-10 w-full md:!px-40 mb-32">
         <p className="text-white text-xl font-semibold mb-3">STRIKER</p>
         <CardGridPlayer />
       </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PlayerChart } from "./PlayerChart";
+import { PlayerChart } from "./Chart/PlayerChart";
 import PlayerTransferTable from "./PlayerTransferTable";
-import { PlayerChartR } from "./PlayerChartR";
+import { PlayerChartR } from "./Chart/PlayerChartR";
 
 import {
   Select,
@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import PlayerController from "../_components/Fixtures/PlayerController";
+import PlayerController from "../../_components/Fixtures/PlayerController";
 
 const TabsSection: React.FC = () => {
   const [selectedChart, setSelectedChart] = useState("bar");

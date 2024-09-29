@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Team from "../_components/Team/Team";
-import Squad from "../_components/Team/Squad";
-import Fixtures from "../_components/Team/Fixture";
-import Stats from "../_components/Team/Stats"; // Assuming Stats is defined
+import Squad from "../_components/Team/Squad/Squad";
+import Fixtures from "../_components/Team/Fixture/Fixture";
+import Stats from "../_components/Team/Stats/Stats"; 
 const Home: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("squad"); // Default to Squad
+  const [activeTab, setActiveTab] = useState("squad"); 
 
   return (
     <>

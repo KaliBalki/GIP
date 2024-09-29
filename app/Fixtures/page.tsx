@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Home: React.FC = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden mb-32">
       <Titles
         title="Our League Fixtures"
         subtitle="Stay ahead of the game with the latest match schedules."
@@ -26,16 +26,22 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Animated Line */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
-          transition={{ duration: 1.6, delay: 1.8, ease: "easeInOut" }}
+          transition={{ duration: 1, delay: 1.8, ease: "easeInOut" }}
         >
           <Line />
         </motion.div>
-        <div className="mt-10">
-          <FixtureCards />
+        <div className="mt-10 mb-10">
+          <motion.div
+            className="text-white opacity-65 font-light text-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 2.3 }}
+          >
+            <FixtureCards />
+          </motion.div>
         </div>
       </div>
     </div>

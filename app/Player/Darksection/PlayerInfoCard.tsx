@@ -1,11 +1,15 @@
 import React from "react";
-
+import Link from "next/link";
 const PlayerInfoCard = () => {
   return (
     <div className="flex flex-col w-full  bg-[#121212] p-5 rounded-2xl border-white border border-opacity-5 ">
       <div className="flex justify-between">
         <div className="text-base font-extralight">Club</div>
-        <div className="font-medium">Manchester City</div>
+        <Link href="/Team">
+          <div className="font-medium hover:font-bold transition-all duration-300">
+            Manchester City
+          </div>
+        </Link>
       </div>
       <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
       <div className="flex justify-between">
@@ -22,8 +26,17 @@ const PlayerInfoCard = () => {
       <div className="flex flex-col">
         <div className="text-base font-extralight">Social Links</div>
         <div className="flex space-x-5">
-          <div className="font-normal">Steam</div>
-          <div className="font-normal">Discord</div>
+          <Link href="/None">
+            <div className="font-normal hover:font-bold transition-all duration-300">
+              Steam
+            </div>
+          </Link>
+          <Link href="/None">
+            {" "}
+            <div className="font-normal hover:font-bold transition-all duration-300">
+              Discord
+            </div>
+          </Link>
         </div>
       </div>
       <div className="mt-9 flex flex-col">

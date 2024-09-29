@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TeamCardProps {
   teamName: string;
@@ -81,9 +82,11 @@ const TeamCard: React.FC<TeamCardProps> = ({
               style={{ color: "#FFD43B" }}
             />
           </div>
-          <button className="bg-white text-black font-bold py-3 px-6 rounded-lg w-full transition-colors border-2 hover:bg-transparent hover:text-white duration-300">
-            SEE CLUB DETAILS &gt;
-          </button>
+          <Link href="/Team">
+            <button className="bg-white text-black font-bold py-3 px-6 rounded-lg w-full transition-colors border-2 hover:bg-transparent hover:text-white duration-300">
+              SEE CLUB DETAILS &gt;
+            </button>
+          </Link>
         </div>
       </div>
     </div>
