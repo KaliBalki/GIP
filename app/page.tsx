@@ -19,7 +19,7 @@ export default function Home() {
   const faqInView = useInView(faqRef, { once: true });
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Hero />
       <div className="lg:pt-80 md:pt-52 pt-48 flex flex-col relative">
         <Intro1 />
