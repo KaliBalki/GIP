@@ -2,8 +2,8 @@
   "name": "EFA League",
   "short_name": "EFA",
 
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#101010",
+  "background_color": "#101010",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
