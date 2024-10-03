@@ -16,7 +16,7 @@ const Intro2 = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={textInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.3, ease: "easeOut" }}
-        className="w-[800px] lg:pl-[56px] flex flex-col space-y-4 pr-12"
+        className="w-[800px] lg:pl-[56px] flex flex-col space-y-4 md:pr-12"
       >
         <div className="text-white md:text-5xl text-3xl font-bold md:text-left text-center Grotesk">
           Elevate Your Gameplay with us
