@@ -24,12 +24,12 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          <div className="md:w-[50rem] flex md:flex-row  flex-col w-full">
+          <div className="md:w-[50rem] flex md:flex-row flex-col items-center w-full ">
             <Controller />
             <hr className="md:mb-0 mb-5 self-center 2xl:w-72 lg:w-72 md:w-24 md:visible collapse border-t-4 border-dotted border-[#262626] mx-4 rounded-3xl" />
             <Tabs
               defaultValue="Fixture"
-              className="w-[400px] self-center"
+              className="self-center justify-self-center	w-full"
               onValueChange={(value) =>
                 setActiveTab(value as "Fixture" | "Table")
               }
