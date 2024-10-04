@@ -7,7 +7,7 @@ const DarkSection: React.FC = () => {
     <>
       <div className="!w-screen h-fit  bg-transparent text-white flex justify-center shadow-[-10px_-40px_80px_rgba(0,0,0,0.9)] pb-32">
         <div className="w-full max-w-6xl mt-16">
-          <div className="flex sm:flex-row flex-col sm:space-x-10 space-x-0 space-y-10 sm:space-y-0 sm:px-0 px-16">
+          <div className="flex sm:flex-row flex-col sm:space-x-10 space-x-0 space-y-10 sm:space-y-0 sm:px-0 px-8">
             <PlayerInfoCard />
             <TabsSection />
           </div>

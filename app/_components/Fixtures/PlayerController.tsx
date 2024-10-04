@@ -48,7 +48,9 @@ const PlayerController = () => {
         <Popover>
           <PopoverTrigger asChild>
             <p className="text-[#f7f7f6] md:text-lg text-sm md:font-semibold  uppercase leading-9 cursor-pointer">
-              {selectedDate ? format(selectedDate, "dd MMMM") : "Pick a date"}
+              {selectedDate
+                ? format(selectedDate, "EEEE dd MMMM")
+                : "Pick a date"}
             </p>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0">

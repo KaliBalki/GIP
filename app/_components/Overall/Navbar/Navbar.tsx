@@ -84,7 +84,9 @@ const Navbar = () => {
     <>
       <nav className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 relative z-[1000]">
         <div className="flex-shrink-0 flex items-center  p-2 z-[1000]">
-          <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />
+          <Link href="/">
+            <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />
+          </Link>
         </div>
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           <div className="flex flex-row text-white space-x-20 items-center h-full font-semibold text-lg">

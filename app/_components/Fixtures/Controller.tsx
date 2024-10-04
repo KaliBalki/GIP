@@ -43,10 +43,10 @@ const Controller = () => {
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
 
-      <div className="flex-grow h-9 text-center">
+      <div className="flex-grow text-center">
         <Popover>
           <PopoverTrigger asChild>
-            <p className="text-[#f7f7f6] md:text-lg text-sm md:font-semibold  uppercase leading-9 cursor-pointer">
+            <p className="text-[#f7f7f6] md:text-lg text-sm md:font-semibold  uppercase cursor-pointer">
               {selectedDate
                 ? format(selectedDate, "EEEE dd MMMM")
                 : "Pick a date"}

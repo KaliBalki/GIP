@@ -61,8 +61,7 @@ const TabsSection: React.FC = () => {
             <hr className="w-10 border-t-4 border mx-4 rounded-3xl" />
             <PlayerController />
           </div>
-          <div className="p-2 mt-4 mb-8 sm:mb-0 rounded-xl">
-            {/* Ensure the chart container is responsive and doesn't overflow */}
+          <div className="p-2 mt-1 mb-8 sm:mb-0 rounded-xl">
             <div className="w-full max-w-[600px] mx-auto">
               {selectedChart === "bar" ? <PlayerChart /> : <PlayerChartR />}
             </div>
