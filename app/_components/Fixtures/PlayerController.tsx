@@ -34,7 +34,7 @@ const PlayerController = () => {
   };
 
   return (
-    <div className="w-64 p-2 bg-[#161616] rounded-sm flex justify-between items-center border border-transparent hover:border-white hover:border-opacity-30 transition-all duration-300">
+    <div className="w-72 p-2 bg-[#161616] rounded-sm flex justify-between items-center border border-transparent hover:border-white hover:border-opacity-30 transition-all duration-300">
       {/* Left Arrow Button */}
       <button
         className="w-10 h-8 hover:text-white text-[#1e1e1d] transition-all duration-300 bg-[#7c51ae] hover:bg-transparent border border-transparent hover:border-[#7c51ae] rounded-sm flex justify-center items-center"
