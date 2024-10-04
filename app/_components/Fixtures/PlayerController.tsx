@@ -47,7 +47,7 @@ const PlayerController = () => {
       <div className="flex-grow h-9 text-center">
         <Popover>
           <PopoverTrigger asChild>
-            <p className="text-[#f7f7f6] text-sm font-normal uppercase leading-9 cursor-pointer">
+            <p className="text-[#f7f7f6] md:text-lg text-sm md:font-semibold  uppercase leading-9 cursor-pointer">
               {selectedDate ? format(selectedDate, "dd MMMM") : "Pick a date"}
             </p>
           </PopoverTrigger>

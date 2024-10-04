@@ -10,7 +10,9 @@ import {
 import { Calendar } from "@/components/ui/calendar"; // Adjust import based on your file structure
 
 const Controller = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+    new Date()
+  );
 
   const handleDateSelect = (day: Date | undefined) => {
     if (day) {
@@ -41,12 +43,13 @@ const Controller = () => {
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
 
-      {/* Date Display with Date Picker */}
       <div className="flex-grow h-9 text-center">
         <Popover>
           <PopoverTrigger asChild>
-            <p className="text-[#f7f7f6] text-lg font-semibold uppercase leading-9 cursor-pointer">
-              {selectedDate ? format(selectedDate, "EEEE dd MMMM") : "Pick a date"}
+            <p className="text-[#f7f7f6] md:text-lg text-sm md:font-semibold  uppercase leading-9 cursor-pointer">
+              {selectedDate
+                ? format(selectedDate, "EEEE dd MMMM")
+                : "Pick a date"}
             </p>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0">
