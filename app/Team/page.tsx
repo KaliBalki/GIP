@@ -5,12 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import Team from "../_components/Team/Team";
 import Squad from "../_components/Team/Squad/Squad";
 import Fixtures from "../_components/Team/Fixture/Fixture";
-import Stats from "../_components/Team/Stats/Stats"; 
+import Stats from "../_components/Team/Stats/Stats";
 const Home: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("squad"); 
+  const [activeTab, setActiveTab] = useState("squad");
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Team onTabChange={setActiveTab} activeTab={activeTab} />
 
       <AnimatePresence mode="wait">
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
         {activeTab === "fixtures" && <Fixtures />}
         {activeTab === "stats" && <Stats />}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
