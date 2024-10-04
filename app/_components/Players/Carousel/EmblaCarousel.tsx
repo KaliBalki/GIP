@@ -7,6 +7,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
+import { useRouter } from "next/navigation"; // Import useRouter from next/navigation
 
 type PropType = {
   slides: number[];
@@ -16,6 +17,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const router = useRouter(); // Initialize router
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -27,14 +29,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  // Function to handle card click and navigate to /Player
+  const handleCardClick = () => {
+    router.push("/Player"); // Navigate to /Player programmatically
+  };
+
   return (
     <section className="embla">
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="p-2">
+            <div
+              className="embla__slide cursor-pointer"
+              key={index}
+              onClick={handleCardClick}
+            >
+              <div className="p-2 block">
                 <div className="flex items-center space-x-4">
                   <div
                     className="w-12 h-12 rounded-full bg-cover bg-center"

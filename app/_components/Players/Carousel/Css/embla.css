@@ -9,14 +9,20 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 100px) {
   .embla {
-    --slide-size: 60% !important;
+    --slide-size: 74%;
   }
 }
-@media (max-width: 1000px) {
+
+@media (min-width: 800px) {
   .embla {
     --slide-size: 40%;
+  }
+}
+@media (min-width: 1000px) {
+  .embla {
+    --slide-size: 20%;
   }
 }
 .embla__viewport {
@@ -26,6 +32,7 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  z-index: 50;
 }
 
 .embla__slide {
@@ -38,6 +45,7 @@
   border: 4px solid transparent;
   border-radius: 0.75rem;
   background-clip: padding-box;
+  cursor: pointer;
 }
 
 .embla__slide::before {
