@@ -102,7 +102,7 @@ const Navbar = () => {
             </Link>
             <Link href="/Fixtures" className="group relative">
               <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
-                Fixtures
+                Standings
               </span>
             </Link>
             <Link href="/Players" className="group relative">

@@ -58,7 +58,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            GOALKEEPER
+            TOP GOALKEEPER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -72,7 +72,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            DEFENDER
+            TOP DEFENDER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -86,7 +86,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            MIDFIELDER
+            TOP MIDFIELDER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            STRIKER
+            TOP STRIKER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>

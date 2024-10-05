@@ -71,7 +71,7 @@ export default function Loading() {
             </div>
             <Progress
               value={progress}
-              className="w-[80%] md:w-[50%] xl:w-full max-w-[500px] h-[2px]" // Responsive width
+              className="w-[80%] md:w-[50%] xl:w-full md:max-w-[500px] max-w-[300px] h-[2px]" // Responsive width
             />
           </div>
         </motion.div>

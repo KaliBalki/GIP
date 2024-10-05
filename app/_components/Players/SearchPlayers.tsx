@@ -82,7 +82,7 @@ const SearchPlayers: React.FC<SearchPlayerProps> = ({ setSelectedPlayer }) => {
       <AnimatePresence>
         {value && (
           <motion.div
-            className="bg-[#101010] absolute rounded-xl w-full max-w-sm mt-2 border"
+            className="bg-[#101010] absolute rounded-xl w-full max-w-[22.5rem] mt-2 border"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

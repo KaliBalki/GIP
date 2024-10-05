@@ -42,7 +42,7 @@ export default function Faq() {
           Frequently Asked Questions
         </div>
       </div>
-      <section className="w-full divide-y divide-[#3b3b3b] rounded-full 2xl:px-56 xl:px-44 lg:px-36 md:px-28 px-14">
+      <section className="w-full divide-y divide-[#3b3b3b] rounded-full 2xl:px-56 xl:px-44 lg:px-36 md:px-28 px-7">
         {faqData.map((item, index) => (
           <div key={index} className="group p-4 md:py-8 py-6">
             <summary
