@@ -35,7 +35,7 @@ const CompleteVerificationPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/free-agents/create`,
+        `https://backendefield.onrender.com/free-agents/create`,
         {
           method: "POST",
           headers: {
