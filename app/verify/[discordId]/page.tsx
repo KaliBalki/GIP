@@ -10,8 +10,9 @@ const VerifyPage = () => {
 
   const handleImageClick = () => {
     if (discordId) {
+      console.log(process.env.NEXT_PUBLIC_BACKEND_URL);
       setIsRedirecting(true);
-      const backendURL = `${process.env.BACKEND_URL}/steam/verify/${discordId}`;
+      const backendURL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/steam/verify/${discordId}`;
       window.location.href = backendURL;
     }
   };
