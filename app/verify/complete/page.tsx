@@ -35,7 +35,7 @@ const CompleteVerificationPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.BACKEND_URL}/free-agents/create`,
+        `${process.env.BACKEND_URL}/freeagent/create`,
         {
           method: "POST",
           headers: {
@@ -60,8 +60,8 @@ const CompleteVerificationPage = () => {
         }, 1000);
         setTimeout(() => {
           clearInterval(timer);
-          router.push("/"); // Redirect to homepage after countdown
-        }, 10000); // 10-second timeout for redirection
+          router.push("/");
+        }, 10000);
       } else {
         setLinkStatus("error");
         setErrorMessage(
