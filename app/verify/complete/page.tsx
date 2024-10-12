@@ -35,7 +35,7 @@ const CompleteVerificationPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.BACKEND_URL}/freeagent/create`,
+        `${process.env.BACKEND_URL}/free-agents/create`,
         {
           method: "POST",
           headers: {
