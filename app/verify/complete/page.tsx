@@ -41,8 +41,9 @@ const CompleteVerificationPage = () => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include", // Include cookies for session validation
           body: JSON.stringify({
-            discordId,
+            discordId, // Retrieved from session
             steamName,
             steamProfileLink: `https://steamcommunity.com/profiles/${steamId}`,
             steamId,
@@ -54,7 +55,6 @@ const CompleteVerificationPage = () => {
 
       if (response.ok) {
         setLinkStatus("success");
-        // Start countdown for redirect
         const timer = setInterval(() => {
           setCountdown((prev) => prev - 1);
         }, 1000);
