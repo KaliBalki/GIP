@@ -26,7 +26,6 @@ const CompleteVerificationPage = () => {
     setErrorMessage("");
   };
 
-  // Handle linking accounts with the backend
   const handleLinkAccounts = async () => {
     if (!isLinkToggled) {
       setErrorMessage("Please click the Link icon to enable linking.");
@@ -43,7 +42,6 @@ const CompleteVerificationPage = () => {
           },
           credentials: "include", // Include cookies for session validation
           body: JSON.stringify({
-            discordId, // Retrieved from session
             steamName,
             steamProfileLink: `https://steamcommunity.com/profiles/${steamId}`,
             steamId,
@@ -55,9 +53,7 @@ const CompleteVerificationPage = () => {
 
       if (response.ok) {
         setLinkStatus("success");
-        const timer = setInterval(() => {
-          setCountdown((prev) => prev - 1);
-        }, 1000);
+        const timer = setInterval(() => setCountdown((prev) => prev - 1), 1000);
         setTimeout(() => {
           clearInterval(timer);
           router.push("/");
