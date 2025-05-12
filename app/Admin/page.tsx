@@ -93,6 +93,31 @@ export default function AdminPage() {
     }
   };
 
+  const handleToggleAdmin = async (id: number, current: boolean) => {
+    try {
+      const res = await fetch(`/api/klanten/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ admin: !current }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        toast.success(
+          `Klant ${id} is nu ${result.admin ? "Admin" : "Geen Admin"}`
+        );
+        setKlanten((prev) =>
+          prev.map((k) =>
+            k.klantID === id ? { ...k, admin: result.admin } : k
+          )
+        );
+      } else {
+        toast.error("Kon admin-status niet wijzigen: " + result.error);
+      }
+    } catch (err) {
+      toast.error("Netwerkfout");
+    }
+  };
+
   return (
     <div className="p-8 space-y-10">
       <Card>
@@ -165,7 +190,15 @@ export default function AdminPage() {
                   <TableCell>
                     <Button
                       size="sm"
-                      variant="destructive"
+                      variant="secondary"
+                      onClick={() => handleToggleAdmin(k.klantID, k.admin)}
+                    >
+                      {k.admin ? "Verwijder Admin" : "Maak Admin"}
+                    </Button>
+                    <Button
+                      size="sm"
+                      className="ml-2"
+                      variant="secondary"
                       onClick={() => handleDeleteKlant(k.klantID)}
                     >
                       Verwijder
