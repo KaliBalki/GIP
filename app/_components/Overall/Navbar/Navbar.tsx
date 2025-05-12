@@ -9,6 +9,8 @@ import Image from "next/image";
 import Button from "../Buttons/Buttons";
 
 const Dropdown: React.FC = () => {
+  const [isAdmin, setIsAdmin] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -32,6 +34,15 @@ const Dropdown: React.FC = () => {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const updateAdmin = () => {
+      setIsAdmin(localStorage.getItem("admin") === "true");
+    };
+    updateAdmin();
+    window.addEventListener("authChange", updateAdmin);
+    return () => window.removeEventListener("authChange", updateAdmin);
   }, []);
 
   const dropdownVariants = {
@@ -77,22 +88,22 @@ const Dropdown: React.FC = () => {
             aria-labelledby="menu-button"
           >
             <div className="py-1">
-              <Link
-                href="/Admin"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                role="menuitem"
-                onClick={() => setIsOpen(false)}
-              >
-                Admin
-              </Link>
-
+              {isAdmin && (
+                <Link
+                  href="/Admin"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Admin
+                </Link>
+              )}
               <a
                 href="#"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
               >
-                Support
+                My Tickets
               </a>
               <a
                 href="#"
@@ -203,22 +214,22 @@ const Navbar = () => {
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           <div className="flex flex-row text-white space-x-20 items-center h-full font-semibold text-lg">
             <Link href="/" className="group relative">
-              <span className="text-white group-hover:text-transparent g-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Home
               </span>
             </Link>
             <Link href="/Teams" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Teams
               </span>
             </Link>
             <Link href="/Fixtures" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Standings
               </span>
             </Link>
             <Link href="/Players" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Players
               </span>
             </Link>
@@ -233,13 +244,8 @@ const Navbar = () => {
                 </div>
               </motion.li>
             ) : (
-              // <button onClick={handleLogout} className="group relative">
-              //   <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-              //     Logout
-              //   </span>
-              // </button>
               <Link href="/Login" className="group relative">
-                <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+                <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                   Login
                 </span>
               </Link>
@@ -385,7 +391,7 @@ const Navbar = () => {
                   href="/Login"
                 >
                   <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#ff6205] to-[#6f44ab]">
-                    5. Login !
+                    5. Login
                   </motion.span>
                 </Link>
               </motion.li>
