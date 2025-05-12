@@ -382,10 +382,10 @@ const Navbar = () => {
               >
                 <Link
                   className="nav-item-mobile  hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left font-bold"
-                  href="/Players"
+                  href="/Login"
                 >
                   <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#ff6205] to-[#6f44ab]">
-                    5. Join Us!
+                    5. Login !
                   </motion.span>
                 </Link>
               </motion.li>
