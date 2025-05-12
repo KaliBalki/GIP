@@ -213,12 +213,12 @@ const Navbar = () => {
               </span>
             </Link>
             <Link href="/Fixtures" className="group relative">
-              <span className="text-white group-hover:text-transparent g-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
                 Standings
               </span>
             </Link>
             <Link href="/Players" className="group relative">
-              <span className="text-white group-hover:text-transparent g-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
                 Players
               </span>
             </Link>
@@ -234,12 +234,12 @@ const Navbar = () => {
               </motion.li>
             ) : (
               // <button onClick={handleLogout} className="group relative">
-              //   <span className="text-white group-hover:text-transparent g-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              //   <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
               //     Logout
               //   </span>
               // </button>
               <Link href="/Login" className="group relative">
-                <span className="text-white group-hover:text-transparent g-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+                <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
                   Login
                 </span>
               </Link>
