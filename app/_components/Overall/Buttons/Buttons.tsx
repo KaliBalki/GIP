@@ -1,7 +1,7 @@
 import React from "react";
 
 type ButtonProps = {
-  variant?: "joinUs" | "learnMore";
+  variant?: "joinUs" | "learnMore" | "login";
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
@@ -22,6 +22,8 @@ const Button: React.FC<ButtonProps> = ({
       "w-52 h-16 py-5 bg-white border-2 border-transparent rounded-2xl justify-center items-center gap-2.5 inline-flex text-BgColor font-semibold text-lg hover:text-white hover:border-white transition duration-500 hover:bg-transparent",
     learnMore:
       "w-52 h-16  py-5 rounded-2xl border-2 border-white justify-center items-center gap-2.5 inline-flex text-white hover:bg-white hover:text-BgColor transition duration-500",
+    login:
+      "w-32 h-12  py-5 rounded-2xl border-2 border-white justify-center items-center gap-2.5 inline-flex text-white hover:bg-white hover:text-BgColor transition duration-500",
   };
 
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${className}`;

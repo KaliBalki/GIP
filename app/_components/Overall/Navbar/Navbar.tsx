@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import Button from "../Buttons/Buttons";
 
 const Navbar = () => {
   const [openMobileNav, setOpenMobileNav] = useState<boolean>(false);
@@ -22,14 +23,11 @@ const Navbar = () => {
 
   useEffect(() => {
     if (openMobileNav) {
-      // Disable scrolling when mobile nav is open
       document.body.style.overflowY = "hidden";
     } else {
-      // Enable scrolling when mobile nav is closed
       document.body.style.overflowY = "auto";
     }
 
-    // Clean up when the component is unmounted or effect is updated
     return () => {
       document.body.style.overflowY = "auto";
     };
@@ -85,30 +83,33 @@ const Navbar = () => {
       <nav className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 relative z-[1000]">
         <div className="flex-shrink-0 flex items-center  p-2 z-[1000]">
           <Link href="/">
-            <Image src="/NoBG_White.png" alt="Logo" width={60} height={60} />
+            <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />
           </Link>
         </div>
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           <div className="flex flex-row text-white space-x-20 items-center h-full font-semibold text-lg">
             <Link href="/" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Home
               </span>
             </Link>
             <Link href="/Teams" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Teams
               </span>
             </Link>
             <Link href="/Fixtures" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Standings
               </span>
             </Link>
             <Link href="/Players" className="group relative">
-              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
+              <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
                 Players
               </span>
+            </Link>
+            <Link href="/Login" className="group relative">
+              <Button variant="login">Login</Button>
             </Link>
           </div>
         </div>
@@ -250,7 +251,7 @@ const Navbar = () => {
                   className="nav-item-mobile  hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left font-bold"
                   href="/Players"
                 >
-                  <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#6bff6b] to-[#324332]">
+                  <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#ff6205] to-[#6f44ab]">
                     5. Join Us!
                   </motion.span>
                 </Link>
