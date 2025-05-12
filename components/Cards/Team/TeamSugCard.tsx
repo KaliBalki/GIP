@@ -13,14 +13,14 @@ const Card = () => {
             height={40}
             className="mr-4"
           />
-          <p className="text-white font-semibold text-lg">TeamName</p>
+          <p className="text-white font-semibold text-lg">TeamNaam</p>
         </div>
 
         <div className="mt-8 flex gap-4 items-center">
           <div>
-            <h3 className="font-medium text-white">Captain</h3>
+            <h3 className="font-medium text-white">Kapitein</h3>
             <span className="text-sm tracking-wide text-white opacity-80">
-              Amount of players
+              Aantal Spelers
             </span>
           </div>
         </div>

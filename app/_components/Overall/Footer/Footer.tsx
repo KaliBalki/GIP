@@ -5,10 +5,10 @@ import Button from "../Buttons/Buttons";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-l from-[#ff6205] to-[#6f44ab] text-white py-24 ">
+    <footer className="bg-gradient-to-l from-[#6bff6b] to-[#324332] text-white py-24 ">
       <div className="container mx-auto flex flex-col justify-center items-center">
         <div className="text-center md:text-8xl text-6xl font-bold">
-          <p>Get Started Now</p>
+          <p>Begin Nu!</p>
         </div>
         <Button
           className="mt-9"

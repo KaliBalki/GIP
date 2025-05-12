@@ -10,7 +10,7 @@ const TeamTabs: React.FC<TeamTabsProps> = ({ activeTab, onTabChange }) => {
     <div className="relative inline-flex flex-row text-xl">
       {/* Gradient background that moves based on active tab */}
       <div
-        className={`absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-lg transition-all duration-500 ${
+        className={`absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-700 via-green-600 to-green-500 rounded-lg transition-all duration-500 ${
           activeTab === "squad"
             ? "!-left-[19px]"
             : activeTab === "fixtures"

@@ -23,7 +23,7 @@ const PlayerStats: React.FC = () => {
           </div>
         </div>
 
-        <div className="hidden md:grid grid-cols-4 gap-x-14 gap-y-7 mt-3 bg-[#522544] bg-opacity-80 p-7 rounded-lg">
+        <div className="hidden md:grid grid-cols-4 gap-x-14 gap-y-7 mt-3 bg-[#324332] bg-opacity-80 p-7 rounded-lg">
           <div className="flex flex-col">
             <p className="text-5xl font-medium">186</p>
             <p className="text-sm">Goals</p>

@@ -17,22 +17,22 @@ import {
 } from "@/components/ui/chart";
 export const description = "A radar chart with multiple data";
 const chartData = [
-  { month: "Goals", desktop: 186, mobile: 80 },
-  { month: "Shots", desktop: 305, mobile: 200 },
-  { month: "Passing", desktop: 237, mobile: 120 },
-  { month: "Tackles", desktop: 73, mobile: 190 },
-  { month: "Interceptions", desktop: 209, mobile: 130 },
-  { month: "Saves", desktop: 214, mobile: 140 },
-  { month: "Catches", desktop: 214, mobile: 140 },
+{ month: "Doelpunten", desktop: 186, mobile: 80 },
+{ month: "Schoten", desktop: 305, mobile: 200 },
+{ month: "Passes", desktop: 237, mobile: 120 },
+{ month: "Tackles", desktop: 73, mobile: 190 },
+{ month: "Intercepties", desktop: 209, mobile: 130 },
+{ month: "Reddingen", desktop: 214, mobile: 140 },
+{ month: "Vangballen", desktop: 214, mobile: 140 },
 ];
 const chartConfig = {
   desktop: {
     label: "Player",
-    color: "#7145ad",
+    color: "#324332",
   },
   mobile: {
     label: "Team",
-    color: "#f69053",
+    color: "#6bff6b",
   },
 } satisfies ChartConfig;
 

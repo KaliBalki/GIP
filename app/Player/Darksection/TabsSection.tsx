@@ -33,7 +33,7 @@ const TabsSection: React.FC = () => {
       {/* Tabs Content */}
       <div className="mt-4 w-full">
         <TabsContent value="Players" className="w-full">
-          <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
+          <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
             Personal Details
           </h1>
           <PlayerTransferTable />
@@ -41,7 +41,7 @@ const TabsSection: React.FC = () => {
 
         <TabsContent value="Stats" className="w-full">
           <div className="flex md:flex-row flex-col md:space-y-0 space-y-3 items-center">
-            <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
               Stats Breakdown{" "}
             </h1>
             <hr className="w-10 border-t-4 border mx-4 rounded-3xl" />

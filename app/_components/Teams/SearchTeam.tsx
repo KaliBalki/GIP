@@ -72,7 +72,7 @@ const Search: React.FC<SearchProps> = ({
         {/* Input Field */}
         <input
           type="text"
-          placeholder="Search Clubs"
+          placeholder="Zoek Clubs"
           className="bg-transparent text-white placeholder-[#6c6c6c] outline-none ml-4 w-full text-xl"
           value={value}
           onChange={handleInputChange}

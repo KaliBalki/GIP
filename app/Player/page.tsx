@@ -7,7 +7,7 @@ import DarkSection from "./Darksection/DarkSection"; // Import the DarkSection c
 const Home: React.FC = () => {
   return (
     <>
-      <div className="w-screen min-h-[30rem] bg-gradient-to-r from-[#6e41a8] via-[#842d79] to-[#dd8258] flex items-center justify-center">
+      <div className="w-screen min-h-[30rem] bg-gradient-to-r from-[#6bff6b] via-[#6bff6b] to-[#324332] flex items-center justify-center">
         <PlayerStats />
       </div>
       <DarkSection />

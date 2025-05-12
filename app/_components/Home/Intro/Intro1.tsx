@@ -23,11 +23,7 @@ const Intro1 = () => {
         </div>
 
         <div className="text-white/75 text-base font-extralight md:text-left text-center">
-          eField offers a cutting-edge platform designed to elevate your gaming
-          skills. Compete in a dynamic environment that fosters growth,
-          encourages teamwork, and rewards precision. Our advanced analytics and
-          real-time feedback tools ensure that every game is a step towards
-          mastery.
+          Cora Central biedt een geavanceerd platform dat ontworpen is om jouw spelvaardigheden te verbeteren. Neem deel aan een dynamische omgeving die groei bevordert, teamwork aanmoedigt en precisie beloont. Onze geavanceerde analyses en real-time feedbacktools zorgen ervoor dat elk spel een stap naar meesterschap is.
         </div>
       </motion.div>
 
@@ -36,7 +32,7 @@ const Intro1 = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={imageInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.3, ease: "easeOut" }}
-        className="absolute -top-20 w-[737px] h-[408px] rounded-3xl overflow-hidden  lg:right-[-35%] xl:right-[-21%] 2xl:right-[-7%] bg-gradient-to-r from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block"
+        className="absolute -top-20 w-[737px] h-[408px] rounded-3xl overflow-hidden  lg:right-[-35%] xl:right-[-21%] 2xl:right-[-7%] bg-gradient-to-r from-[#6bff6b] via-[#324332] to-[#009200] p-[8px] hidden lg:block"
       >
         <div className="w-full h-full rounded-3xl bg-black">
           <Image

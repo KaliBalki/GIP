@@ -35,9 +35,9 @@ const Page: React.FC = () => {
   return (
     <>
       <Titles
-        title="Players"
-        subtitle="Meet the Players that define the Efield League."
-        description="From fierce rivalries to unforgettable moments, these people bring the game to life."
+        title="Spelers"
+        subtitle="Ontdek de sterren van de Cora Central League."
+        description="Van felle rivaliteiten tot onvergetelijke momenten, deze mensen brengen het spel tot leven."
       />
       <motion.div
         className="flex justify-center md:mt-4 mt-5 mb-10"
@@ -58,7 +58,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            TOP GOALKEEPER
+            TOP KEEPER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -72,7 +72,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            TOP DEFENDER
+            TOP VERDEDIGER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -86,7 +86,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            TOP MIDFIELDER
+            TOP MIDDENVELDER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
           variants={containerVariants}
         >
           <div className="font-bold text-white md:!px-32 text-2xl text-center">
-            TOP STRIKER
+            TOP AANVALLER
           </div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </motion.div>

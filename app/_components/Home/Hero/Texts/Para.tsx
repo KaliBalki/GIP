@@ -9,9 +9,9 @@ const Para = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut", delay: 2.6 }}
     >
-      Where every play matters, and every player shines.
+      Waar elke actie telt en elke speler schittert.
       <br />
-      Welcome to eField.
+      Welkom bij Cora Central.
     </motion.p>
   );
 };

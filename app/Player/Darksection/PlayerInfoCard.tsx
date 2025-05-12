@@ -28,19 +28,19 @@ const PlayerInfoCard = () => {
         <div className="flex space-x-5">
           <Link href="/None">
             <div className="font-normal hover:font-bold transition-all duration-300">
-              Steam
+              Instagram
             </div>
           </Link>
           <Link href="/None">
             {" "}
             <div className="font-normal hover:font-bold transition-all duration-300">
-              Discord
+              Facebook
             </div>
           </Link>
         </div>
       </div>
       <div className="mt-9 flex flex-col">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-[#8b53cc] to-[#da7f59] bg-clip-text text-transparent">
+        <h1 className="text-xl font-bold bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
           Honours & Awards
         </h1>
         <div className="flex justify-between flex-col">

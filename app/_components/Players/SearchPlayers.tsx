@@ -72,7 +72,7 @@ const SearchPlayers: React.FC<SearchPlayerProps> = ({ setSelectedPlayer }) => {
 
         <input
           type="text"
-          placeholder="Search Player"
+          placeholder="Zoek Spelers"
           className="bg-transparent text-white placeholder-[#6c6c6c] outline-none ml-4 w-full text-xl"
           value={value}
           onChange={handleInputChange}

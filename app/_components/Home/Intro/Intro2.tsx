@@ -19,14 +19,11 @@ const Intro2 = () => {
         className="w-[800px] lg:pl-[56px] flex flex-col space-y-4 md:pr-12"
       >
         <div className="text-white md:text-5xl text-3xl font-bold md:text-left text-center Grotesk">
-          Elevate Your Gameplay with us
+          Verbeter Je Spel Met Ons
         </div>
 
         <div className="text-white/75 text-base font-extralight md:text-left text-center">
-          Discover eField, where innovation meets competition. Our platform
-          enhances your esports experience with real-time analysis, customized
-          coaching, and a community that fosters growth. Join us and take your
-          skills to the next level.
+          Ontdek Cora Central, waar innovatie en competitie samenkomen. Ons platform verbetert je esports-ervaring met real-time analyses, gepersonaliseerde coaching en een gemeenschap die groei ondersteunt. Sluit je bij ons aan en breng je vaardigheden naar een hoger niveau.
         </div>
       </motion.div>
 
@@ -35,7 +32,7 @@ const Intro2 = () => {
         initial={{ opacity: 0, x: -100 }}
         animate={imageInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.3, ease: "easeOut" }}
-        className="absolute w-[737px] h-[408px] rounded-3xl overflow-hidden  lg:left-[-35%] xl:left-[-21%] 2xl:left-[-7%] bg-gradient-to-l from-[#f6934c] via-[#c261d1] to-[#4a2684] p-[8px] hidden lg:block"
+        className="absolute w-[737px] h-[408px] rounded-3xl overflow-hidden  lg:left-[-35%] xl:left-[-21%] 2xl:left-[-7%] bg-gradient-to-l from-[#6bff6b] via-[#324332] to-[#009200] p-[8px] hidden lg:block"
       >
         <div className="w-full h-full rounded-3xl bg-black">
           <Image

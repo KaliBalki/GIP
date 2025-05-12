@@ -12,9 +12,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "eField League",
+  title: "Cora Central",
   description:
-    "Where every play matters, and every player shines. Welcome to eField.",
+    "Waar elke actie telt en elke speler schittert. Welkom bij Cora Central.",
   manifest: "/manifest.json",
   themeColor: "#000000",
   icons: {

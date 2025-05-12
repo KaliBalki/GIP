@@ -14,9 +14,9 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-x-hidden mb-32">
       <Titles
-        title="Our League Fixtures"
-        subtitle="Stay ahead of the game with the latest match schedules."
-        description="Don't miss a moment of the action."
+        title="Ons Wedstrijdschema"
+        subtitle="Blijf op de hoogte met de nieuwste wedstrijdschema's."
+        description="Mis geen moment van de actie."
       />
       <div className="2xl:px-44 xl:px-28 lg:px-20 md:px-16 px-10 md:pt-20 pt-6 flex flex-col justify-center">
         <motion.div
@@ -35,8 +35,8 @@ const Home: React.FC = () => {
               }
             >
               <TabsList>
-                <TabsTrigger value="Fixture">Fixture</TabsTrigger>
-                <TabsTrigger value="Table">Table</TabsTrigger>
+                <TabsTrigger value="Fixture">Wedstrijden</TabsTrigger>
+                <TabsTrigger value="Table">Stand</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>

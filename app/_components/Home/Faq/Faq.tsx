@@ -38,8 +38,8 @@ export default function Faq() {
   return (
     <>
       <div className="flex text-center justify-center md:pt-24 pt-36 md:mb-7">
-        <div className="md:text-7xl !leading-relaxed text-3xl font-bold text-transparent bg-clip-text bg-[linear-gradient(to_right,#f6934c,#c261d1,#4a2684,#f6934c)] bg-[length:200%_auto] hover:animate-gradient Grotesk">
-          Frequently Asked Questions
+        <div className="md:text-7xl !leading-relaxed text-3xl font-bold text-transparent bg-clip-text bg-[linear-gradient(to_right,#6bff6b)] bg-[length:200%_auto] hover:animate-gradient Grotesk">
+         Veelgestelde Vragen
         </div>
       </div>
       <section className="w-full divide-y divide-[#3b3b3b] rounded-full 2xl:px-56 xl:px-44 lg:px-36 md:px-28 px-7">
@@ -83,23 +83,23 @@ export default function Faq() {
 
 const faqData: FAQItem[] = [
   {
-    question: "What is eField?",
+    question: "Wat is Cora Central?",
     answer:
-      "eField is a competitive football (soccer) league hosted on Discord, where players from around the world can join, form teams, and compete in exciting matches and tournaments.",
+      "Cora Central is een competitieve voetbalcompetitie die wordt gehost op Discord, waar spelers van over de hele wereld kunnen deelnemen, teams kunnen vormen en kunnen strijden in spannende wedstrijden en toernooien.",
   },
   {
-    question: "Where can join eField?",
+    question: "Waar kan ik meedoen aan Cora Central?",
     answer:
-      "eField is a competitive football (soccer) league hosted on Discord, where players from around the world can join, form teams, and compete in exciting matches and tournaments.",
+      "Je kunt je ons contacteren. En dan Volg de instructies in het welkomstkanaal om je te registreren en een team te vormen.",
   },
   {
-    question: "Is there a registration fee to join the league?",
+    question: "Is er een registratiekosten om deel te nemen aan de competitie?",
     answer:
-      "eField is a competitive football (soccer) league hosted on Discord, where players from around the world can join, form teams, and compete in exciting matches and tournaments.",
+      "Nee, deelname aan Cora Central is gratis. We willen dat iedereen de kans krijgt om deel te nemen en te genieten van de competitie.",
   },
   {
-    question: "Are there different skill levels or divisions in the league?",
+    question: "Zijn er verschillende vaardigheidsniveaus of divisies in de competitie?",
     answer:
-      "eField is a competitive football (soccer) league hosted on Discord, where players from around the world can join, form teams, and compete in exciting matches and tournaments.",
+      "Ja, we hebben divisies gebaseerd op vaardigheidsniveaus, zodat spelers van alle niveaus een eerlijke en leuke ervaring hebben. Nieuwe spelers beginnen in de instapdivisie en kunnen opklimmen naarmate ze beter worden.",
   },
 ];

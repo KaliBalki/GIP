@@ -57,7 +57,7 @@
   bottom: -4px;
   border-radius: 0.75rem;
   padding: 2px;
-  background: linear-gradient(45deg, #7d51ad, #fa610a);
+  background: linear-gradient(45deg, #6bff6b, #324332);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* This ensures the gradient shows only on the border */
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;

@@ -123,7 +123,7 @@ const LeagueTable = () => {
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden sm:rounded-lg">
             <table className="min-w-full text-sm text-white">
-              <thead className="bg-[#6f429b] text-xs uppercase font-medium">
+              <thead className="bg-[#6bff6b] text-xs uppercase font-medium">
                 <tr>
                   <th></th>
                   <th

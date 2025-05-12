@@ -25,7 +25,7 @@ const FixturesCard = () => {
             <Image
               src="/NoBG_White.png"
               width={50}
-              height={50}
+              height={90}
               alt="Team 2 Logo"
             />
           </Link>

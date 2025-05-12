@@ -60,7 +60,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
               clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0 100%)",
             }}
           >
-            <h2 className="text-xl font-bold">Captain</h2>
+            <h2 className="text-xl font-bold">Kapitein</h2>
           </div>
         </div>
 

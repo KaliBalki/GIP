@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             className="xl:text-[7rem] text-[5.1rem] text-white font-bold mb-4 leading-tight Grotesk"
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Our League <br /> Teams
+            Onze Competitie <br /> Teams
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -123,12 +123,12 @@ const Home: React.FC = () => {
             {/* Heading and Line */}
             <div className="flex items-center md:flex-row flex-col space-y-4">
               <h1 className="Grotesk text-white text-6xl font-semibold">
-                Suggestions
+                Suggesties
               </h1>
               <hr className="w-24 border-t-4 border-dotted border-[#262626] mx-4 rounded-3xl" />
               <TabsList className="flex justify-center sm:justify-start">
-                <TabsTrigger value="Players">Players</TabsTrigger>
-                <TabsTrigger value="Teams">Teams</TabsTrigger>
+                <TabsTrigger value="Players">Spelers</TabsTrigger>
+                <TabsTrigger value="Teams">Clubs</TabsTrigger>
               </TabsList>
             </div>
           </div>
