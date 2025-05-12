@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,8 +8,118 @@ import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import Button from "../Buttons/Buttons";
 
+const Dropdown: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleLogout = () => {
+    localStorage.removeItem("LoggedIn");
+    localStorage.removeItem("admin");
+    localStorage.removeItem("klantID");
+    window.dispatchEvent(new Event("authChange"));
+    window.location.href = "/";
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const dropdownVariants = {
+    initial: { opacity: 0, scale: 0.95 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.95 },
+  };
+
+  return (
+    <div className="relative inline-block text-left" ref={dropdownRef}>
+      <button
+        type="button"
+        className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-white shadow-xs ring-2 ring-white ring-inset hover:bg-gray-800 transition duration-300"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg
+          className="size-5 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
+        </svg>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={dropdownVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.1 }}
+            className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+          >
+            <div className="py-1">
+              <Link
+                href="/Admin"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => setIsOpen(false)}
+              >
+                Admin
+              </Link>
+
+              <a
+                href="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => setIsOpen(false)}
+              >
+                Support
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={() => setIsOpen(false)}
+              >
+                License
+              </a>
+              <button
+                type="button"
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
+                role="menuitem"
+                onClick={handleLogout}
+              >
+                Sign out
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 const Navbar = () => {
   const [openMobileNav, setOpenMobileNav] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const pathname = usePathname();
   const customease = [0.05, 0.58, 0.57, 0.96];
@@ -32,6 +142,10 @@ const Navbar = () => {
       document.body.style.overflowY = "auto";
     };
   }, [openMobileNav]);
+
+  useEffect(() => {
+    setIsLoggedIn(localStorage.getItem("LoggedIn") === "true");
+  }, [pathname]);
 
   const hrVariant = {
     initial: {
@@ -108,9 +222,28 @@ const Navbar = () => {
                 Players
               </span>
             </Link>
-            <Link href="/Login" className="group relative">
-              <Button variant="login">Login</Button>
-            </Link>
+            {isLoggedIn ? (
+              <motion.li
+                variants={liVariant}
+                transition={{ duration: 0.3, delay: 0 }}
+                className="flex items-center w-full flex-col gap-10"
+              >
+                <div className="pl-5 w-full">
+                  <Dropdown />
+                </div>
+              </motion.li>
+            ) : (
+              // <button onClick={handleLogout} className="group relative">
+              //   <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
+              //     Logout
+              //   </span>
+              // </button>
+              <Link href="/Login" className="group relative">
+                <span className="text-white group-hover:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text transition duration-300">
+                  Login
+                </span>
+              </Link>
+            )}
           </div>
         </div>
         <div className="md:hidden z-[1001]">
