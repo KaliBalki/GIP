@@ -92,7 +92,7 @@ const Page: React.FC = () => {
               Inloggen
             </Button>
             <Link
-              href="/signup"
+              href="/Signup"
               className="mt-3 text-sm text-blue-600 hover:underline"
             >
               Nog geen account?
