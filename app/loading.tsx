@@ -65,7 +65,7 @@ export default function Loading() {
                 priority
                 src={Logo_Animation}
                 fill
-                alt="eField"
+                alt="Cora Central"
                 className="object-contain w-full h-full"
               />
             </div>
@@ -91,7 +91,7 @@ const Progress: React.FC<ProgressProps> = ({ value, className }) => {
       className={`relative h-2 w-full bg-gray-200 rounded-full overflow-hidden ${className}`}
     >
       <div
-        className="h-full bg-gradient-to-r from-[#4a2684] via-[#c261d1] to-[#f6934c] transition-all"
+        className="h-full bg-gradient-to-r from-[#6bff6b] via-[#324332] to-[#009200] transition-all"
         style={{ width: `${value}%` }}
       />
     </div>
