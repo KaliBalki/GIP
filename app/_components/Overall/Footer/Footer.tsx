@@ -13,7 +13,7 @@ const Footer = () => {
         <Button
           className="mt-9"
           variant="learnMore"
-          onClick={() => alert("ali homo")}
+          onClick={() => alert("TEST TEST")}
         >
           Launch App &rarr;
         </Button>
@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="text-center">
           <Image
             src="/NoBG_White.png"
-            width={100}
-            height={100}
+            width={170}
+            height={120}
             alt="Picture of the author"
           />
         </div>

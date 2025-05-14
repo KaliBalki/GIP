@@ -15,14 +15,14 @@ const FixturesCard = () => {
               alt="Team 1 Logo"
             />
           </Link>
-          <div className="mt-2 text-lg">Team 1</div>
+          <div className="mt-2 text-lg">Club 1</div>
         </div>
 
         <div className="text-center">
           <div className="text-xl font-bold">14:30</div>
           <Link href="">
             <button className="mt-2 bg-transparent text-white font-semibold py-2 px-4 rounded border border-white hover:bg-green-600 transition duration-200">
-              Buy Tickets
+              Koop Tickets
             </button>
           </Link>
         </div>
@@ -36,7 +36,7 @@ const FixturesCard = () => {
               alt="Team 2 Logo"
             />
           </Link>
-          <div className="mt-2 text-lg">Team 2</div>
+          <div className="mt-2 text-lg">Club 2</div>
         </div>
       </div>
     </div>

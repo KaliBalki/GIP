@@ -43,19 +43,19 @@ const Stats = () => {
       <p className="text-sm">Doelpunten</p>
     </div>
     <div className="flex flex-col">
-      <p className="text-4xl md:text-5xl font-medium">0</p>
+      <p className="text-4xl md:text-5xl font-medium">242</p>
       <p className="text-sm">Schoten</p>
     </div>
     <div className="flex flex-col">
-      <p className="text-4xl md:text-5xl font-medium">0</p>
+      <p className="text-4xl md:text-5xl font-medium">321</p>
       <p className="text-sm">Passes</p>
     </div>
     <div className="flex flex-col">
-      <p className="text-4xl md:text-5xl font-medium">0</p>
+      <p className="text-4xl md:text-5xl font-medium">42</p>
       <p className="text-sm">Tackles</p>
     </div>
     <div className="flex flex-col">
-      <p className="text-4xl md:text-5xl font-medium">0</p>
+      <p className="text-4xl md:text-5xl font-medium">22</p>
       <p className="text-sm">Intercepties</p>
     </div>
     <div className="flex flex-col">

@@ -24,8 +24,8 @@ const TabsSection: React.FC = () => {
           <h1 className="Grotesk text-white text-6xl font-semibold">Faded</h1>
           <hr className="2xl:w-96 lg:w-72 md:w-24 w-16 border-t-4 border-dotted border-[#262626] mx-4 rounded-3xl" />
           <TabsList className="flex justify-center sm:justify-start">
-            <TabsTrigger value="Players">Overview</TabsTrigger>
-            <TabsTrigger value="Stats">Stats</TabsTrigger>
+            <TabsTrigger value="Players">Overzicht</TabsTrigger>
+            <TabsTrigger value="Stats">Statistieken</TabsTrigger>
           </TabsList>
         </div>
       </div>
@@ -34,7 +34,7 @@ const TabsSection: React.FC = () => {
       <div className="mt-4 w-full">
         <TabsContent value="Players" className="w-full">
           <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
-            Personal Details
+            Persoonlijke gegevens
           </h1>
           <PlayerTransferTable />
         </TabsContent>
@@ -42,7 +42,7 @@ const TabsSection: React.FC = () => {
         <TabsContent value="Stats" className="w-full">
           <div className="flex md:flex-row flex-col md:space-y-0 space-y-3 items-center">
             <h1 className="text-2xl font-bold text-center md:text-left bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
-              Stats Breakdown{" "}
+              Statistieken{" "}
             </h1>
             <hr className="w-10 border-t-4 border mx-4 rounded-3xl" />
             <Select

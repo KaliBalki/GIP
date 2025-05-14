@@ -60,7 +60,7 @@ export default function Loading() {
           className="bg-[#101010] fixed top-0 left-0 z-40 h-screen w-screen flex justify-center items-center"
         >
           <div className="flex justify-center items-center flex-col h-full w-full">
-            <div className="relative w-[50%] md:w-[30%] h-[150px] xl:w-[400px] xl:h-[200px] flex-shrink-0">
+            <div className="relative w-[90%] md:w-[70%] h-[250px] xl:w-[500px] xl:h-[300px] flex-shrink-0">
               <Image
                 priority
                 src={Logo_Animation}

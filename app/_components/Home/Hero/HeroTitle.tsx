@@ -16,12 +16,12 @@ const HeroTitle = () => {
       >
         <Button
           variant="joinUs"
-          onClick={() => alert("Maak de video van after effect af")}
+          onClick={() => alert("TEST TEST")}
         >
-          Join us!
+           Word lid!
         </Button>
-        <Button variant="learnMore" onClick={() => alert("ali homo")}>
-          Download App &rarr;
+        <Button variant="learnMore" onClick={() => alert("TEST TEST")}>
+         App downloaden &rarr;
         </Button>
       </motion.div>
     </div>

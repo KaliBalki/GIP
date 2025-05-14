@@ -208,29 +208,29 @@ const Navbar = () => {
       <nav className="bg-NavColor w-screen h-20 flex items-center justify-between px-4 relative z-[1000]">
         <div className="flex-shrink-0 flex items-center  p-2 z-[1000]">
           <Link href="/">
-            <Image src="/NoBG_White.png" alt="Logo" width={40} height={40} />
+            <Image src="/NoBG_White.png" alt="Logo" width={110} height={90} />
           </Link>
         </div>
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           <div className="flex flex-row text-white space-x-20 items-center h-full font-semibold text-lg">
             <Link href="/" className="group relative">
               <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-                Home
+                Startpagina
               </span>
             </Link>
             <Link href="/Teams" className="group relative">
               <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-                Teams
+                Clubs
               </span>
             </Link>
             <Link href="/Fixtures" className="group relative">
               <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-                Standings
+                Wedstrijden
               </span>
             </Link>
             <Link href="/Players" className="group relative">
               <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-                Players
+                Spelers
               </span>
             </Link>
             {isLoggedIn ? (
@@ -246,7 +246,7 @@ const Navbar = () => {
             ) : (
               <Link href="/Login" className="group relative">
                 <span className="text-white group-hover:text-transparent bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text transition duration-300">
-                  Login
+                  Inloggen
                 </span>
               </Link>
             )}
@@ -299,7 +299,7 @@ const Navbar = () => {
                   className="nav-item-mobile hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left"
                   href="/"
                 >
-                  <motion.span className="pl-5">1. Home</motion.span>
+                  <motion.span className="pl-5">1. Startpagina</motion.span>
                 </Link>
                 <motion.hr
                   variants={hrVariant}
@@ -322,7 +322,7 @@ const Navbar = () => {
                   className="nav-item-mobile hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left"
                   href="/Teams"
                 >
-                  <motion.span className="pl-5">2. Teams</motion.span>
+                  <motion.span className="pl-5">2. Clubs</motion.span>
                 </Link>
                 <motion.hr
                   variants={hrVariant}
@@ -345,7 +345,7 @@ const Navbar = () => {
                   className="nav-item-mobile hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left"
                   href="/Fixtures"
                 >
-                  <motion.span className="pl-5">3. Fixtures</motion.span>
+                  <motion.span className="pl-5">3. Wedstrijden</motion.span>
                 </Link>
                 <motion.hr
                   variants={hrVariant}
@@ -368,7 +368,7 @@ const Navbar = () => {
                   className="nav-item-mobile hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left"
                   href="/Players"
                 >
-                  <motion.span className="pl-5">4. Players</motion.span>
+                  <motion.span className="pl-5">4. Spelers</motion.span>
                 </Link>
                 <motion.hr
                   variants={hrVariant}
@@ -390,8 +390,8 @@ const Navbar = () => {
                   className="nav-item-mobile  hover:text-foreground/80 duration-100 text-[42px] xs:text-[50px] sm:text-[60px] w-full text-left font-bold"
                   href="/Login"
                 >
-                  <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#ff6205] to-[#6f44ab]">
-                    5. Login
+                  <motion.span className="pl-5 text-transparent bg-clip-text bg-gradient-to-r from-[#6bff6b] to-[#324332]">
+                    5. Inloggen
                   </motion.span>
                 </Link>
               </motion.li>

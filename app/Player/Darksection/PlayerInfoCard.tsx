@@ -13,18 +13,18 @@ const PlayerInfoCard = () => {
       </div>
       <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
       <div className="flex justify-between">
-        <div className="text-base font-extralight">Position</div>
-        <div className="font-medium">Attacker</div>
+        <div className="text-base font-extralight">Positie</div>
+        <div className="font-medium">Aanvaller</div>
       </div>
       <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
       <div className="flex justify-between">
-        <div className="text-base font-extralight">Nationality</div>
+        <div className="text-base font-extralight">Nationaliteit</div>
         <div className="font-medium">Iraq</div>
       </div>
       <hr className="my-2 -mx-5  border-t border-white border-opacity-5" />
 
       <div className="flex flex-col">
-        <div className="text-base font-extralight">Social Links</div>
+        <div className="text-base font-extralight">Sociale Links</div>
         <div className="flex space-x-5">
           <Link href="/None">
             <div className="font-normal hover:font-bold transition-all duration-300">
@@ -41,7 +41,7 @@ const PlayerInfoCard = () => {
       </div>
       <div className="mt-9 flex flex-col">
         <h1 className="text-xl font-bold bg-gradient-to-r from-[#6bff6b] to-[#324332] bg-clip-text text-transparent">
-          Honours & Awards
+         Onderscheidingen en prijzen
         </h1>
         <div className="flex justify-between flex-col">
           <div className="flex justify-between">
@@ -49,13 +49,13 @@ const PlayerInfoCard = () => {
               className="text-base
          font-extralight bg-gradient-to-r"
             >
-              Premier League Champion
+              Champions League 
             </h1>
             <h1
               className="text-lg
          font-medium bg-gradient-to-r"
             >
-              2
+              4
             </h1>
           </div>
           <div className="flex justify-between">
@@ -69,7 +69,7 @@ const PlayerInfoCard = () => {
               className="text-lg
          font-medium bg-gradient-to-r"
             >
-              2
+              1
             </h1>
           </div>
         </div>
