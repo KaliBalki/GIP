@@ -90,10 +90,10 @@ const faqData: FAQItem[] = [
   {
     question: "Waar kan ik meedoen aan Cora Central?",
     answer:
-      "Je kunt je ons contacteren. En dan Volg de instructies in het welkomstkanaal om je te registreren en een team te vormen.",
+      "Je kunt ons contacteren. En dan Volg de instructies in het welkomstkanaal om je te registreren en een team te vormen.",
   },
   {
-    question: "Is er een registratiekosten om deel te nemen aan de competitie?",
+    question: "Is er een registratiekost om deel te nemen aan de competitie?",
     answer:
       "Nee, deelname aan Cora Central is gratis. We willen dat iedereen de kans krijgt om deel te nemen en te genieten van de competitie.",
   },
